@@ -15,9 +15,12 @@ export default function Register() {
 
   const formik = useFormik({
     initialValues: {
+      firstName:"",
+      lastName:"",
       email: "",
       username: "",
       password: "",
+      mobile:""
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -47,7 +50,7 @@ export default function Register() {
     <div className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
 
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center">
         {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
         <div className="signup form-bx">
           <div className="title flex flex-col items-center">
@@ -74,17 +77,7 @@ export default function Register() {
                 name="profile"
               />
             </div>
-            <label htmlFor="email">Profile Picture*</label>
-            {/* email */}
-            <div className="form-floating my-3">
-              <input
-                {...formik.getFieldProps("email")}
-                className="form-control"
-                type="email"
-                placeholder="Email"
-              />
-              <label htmlFor="email">Email*</label>
-            </div>
+            <label htmlFor="profile">Profile Picture*</label>
             {/* username */}
             <div className="form-floating my-3">
               <input
@@ -95,6 +88,37 @@ export default function Register() {
               />
               <label htmlFor="username">Username*</label>
             </div>
+            {/* first name */}
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("firstName")}
+                className="form-control"
+                type="firstName"
+                placeholder="First Name"
+              />
+              <label htmlFor="firstName">First Name*</label>
+            </div>
+            {/* last name */}
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("lastName")}
+                className="form-control"
+                type="lastName"
+                placeholder="Last Name"
+              />
+              <label htmlFor="lastName">Last Name*</label>
+            </div>
+            {/* email */}
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("email")}
+                className="form-control"
+                type="email"
+                placeholder="Email"
+              />
+              <label htmlFor="email">Email*</label>
+            </div>
+            
             {/* password */}
             <div className="form-floating my-3">
               <input
@@ -104,6 +128,16 @@ export default function Register() {
                 placeholder="Password"
               />
               <label htmlFor="password">Password*</label>
+            </div>
+            {/* mobile */}
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("mobile")}
+                className="form-control"
+                type="text"
+                placeholder="Mobile Number"
+              />
+              <label htmlFor="mobile">Mobile Number*</label>
             </div>
 
             <button className={styles.btn} type="submit">

@@ -53,16 +53,16 @@ const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">6th April</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">7th April</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">8th April</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="fourth">Tab 4</Nav.Link>
+                        <Nav.Link eventKey="fourth">9th April</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -77,63 +77,70 @@ const Projects = () => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row> */}
-                        <div class="tl-content" style={{top: "10%"}}>
-                    <p><i class="fa fa-clock-o" style={{color:"white"}}>
-                            10:00 AM - 10:45 AM</i> <span style={{paddingLeft: "20px", fontStyle: "bold"}}>
-                            Inauguration</span>
-                    </p>
+                        {/* <div class="tl-content" style={{ top: "10%" }}>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:00 AM - 10:45 AM
+                            </i>{" "}
+                            <span
+                              style={{ paddingLeft: "20px", fontStyle: "bold" }}
+                            >
+                              Inauguration
+                            </span>
+                          </p>
 
-                    <p><i class="fa fa-clock-o" style={{color:"white"}}>
-                            11:00 AM - 12:00 PM</i> <span style={{paddingLeft: "20px"}}>
-                            Networking Session</span> </p>
-                    <p><i class="fa fa-clock-o" style={{color:"white"}}>
-                            12:00 PM - 1:00 PM</i> <span style={{paddingLeft: "20px"}}>
-                            Panel Discussion: Women Rights/Human Rights</span> </p>
-                    <ul>
-                        -Women entrepreneurship in the wake of economic liberalisation and globalisation.
-                    </ul>
-                    <p><i class="fa fa-clock-o" style={{color:"white"}}>
-                            1:30 PM - 2:30 PM</i> <span style={{paddingLeft: "40px"}}>
-                            Roadmap to DSA</span> </p>
-                    <ul>
-                        -Geeks For Geeks <br/>
-                        Speaker : Dr. Mousiki Kar
-                    </ul>
-                    <p><i class="fa fa-clock-o" style={{color:"white"}}>
-                            6:00 PM - 7:00 PM</i> <span style={{paddingLeft: "40px"}}>
-
-                            Physical and computational modeling of smart homes</span> </p>
-                    <ul>
-                        Speaker : Damla Turgut
-                    </ul>
-                </div>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              11:00 AM - 12:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Networking Session
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              12:00 PM - 1:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Panel Discussion: Women Rights/Human Rights
+                            </span>{" "}
+                          </p>
+                          <ul>
+                            -Women entrepreneurship in the wake of economic
+                            liberalisation and globalisation.
+                          </ul>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              1:30 PM - 2:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Roadmap to DSA
+                            </span>{" "}
+                          </p>
+                          <ul>
+                            -Geeks For Geeks <br />
+                            Speaker : Dr. Mousiki Kar
+                          </ul>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              6:00 PM - 7:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Physical and computational modeling of smart homes
+                            </span>{" "}
+                          </p>
+                          <ul>Speaker : Damla Turgut</ul>
+                        </div> */}
+                        <div>Coming Soon!</div>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <div>Coming Soon!</div>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <div>Coming Soon!</div>
                       </Tab.Pane>
                       <Tab.Pane eventKey="fourth">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <div>Coming Soon!</div>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
