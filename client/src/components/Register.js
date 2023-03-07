@@ -20,7 +20,8 @@ export default function Register() {
       email: "",
       username: "",
       password: "",
-      mobile:""
+      mobile:"",
+      institute:""
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -93,7 +94,7 @@ export default function Register() {
               <input
                 {...formik.getFieldProps("firstName")}
                 className="form-control"
-                type="firstName"
+                type="text"
                 placeholder="First Name"
               />
               <label htmlFor="firstName">First Name*</label>
@@ -103,7 +104,7 @@ export default function Register() {
               <input
                 {...formik.getFieldProps("lastName")}
                 className="form-control"
-                type="lastName"
+                type="text"
                 placeholder="Last Name"
               />
               <label htmlFor="lastName">Last Name*</label>
@@ -140,6 +141,15 @@ export default function Register() {
               <label htmlFor="mobile">Mobile Number*</label>
             </div>
 
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("institute")}
+                className="form-control"
+                type="text"
+                placeholder="institute"
+              />
+              <label htmlFor="institue">Institute Name*</label>
+            </div>
             <button className={styles.btn} type="submit">
               Register
             </button>

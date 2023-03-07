@@ -36,7 +36,7 @@ export async function verifyUser(req, res, next){
 export async function register(req,res){
 
     try {
-        const { username, password, profile, email } = req.body;        
+        const { username, password, profile, email,firstName,lastName,institue,mobile } = req.body;        
 
         // check the existing user
         const existUsername = new Promise((resolve, reject) => {
@@ -69,12 +69,16 @@ export async function register(req,res){
                                 username,
                                 password: hashedPassword,
                                 profile: profile || '',
-                                email
+                                email,
+                                firstName,
+                                lastName,
+                                mobile,
+                                institue
                             });
 
                             // return save result as a response
                             user.save()
-                                .then(result => res.status(201).send({ msg: "User Register Successfully"}))
+                                .then(result => res.status(201).json(user))
                                 .catch(error => res.status(500).send({error}))
 
                         }).catch(error => {
