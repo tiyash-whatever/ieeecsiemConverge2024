@@ -62,7 +62,7 @@ export default function Register() {
           </div>
 
           <form className="py-1" onSubmit={formik.handleSubmit}>
-            <div className="profile flex justify-center py-2">
+            {/* <div className="profile flex justify-center py-2">
               <label htmlFor="profile">
                 <img
                   src={file || avatar}
@@ -71,14 +71,14 @@ export default function Register() {
                 />
               </label>
 
-              {/* <input
+              <input
                 onChange={onUpload}
                 type="file"
                 id="profile"
                 name="profile"
-              /> */}
+              />
             </div>
-            <label htmlFor="profile">Profile Picture*</label>
+            <label htmlFor="profile">Profile Picture*</label> */}
             {/* username */}
             <div className="form-floating my-3">
               <input
