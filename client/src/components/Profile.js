@@ -97,7 +97,7 @@ export default function Profile() {
               </button>
             </div>
 
-            <div className="textbox flex flex-col items-center gap-3">
+            <div className="textbox flex flex-col items-center gap-2">
               <div className="name flex gap-10">
                 {/* <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='FirstName' /> */}
                 <h2 className="h4 mt-5">
@@ -108,12 +108,12 @@ export default function Profile() {
               <h2 className="h4 pl-2 pr-2">It's good to see you here!!</h2>
 
               {/* <input {...formik.getFieldProps('mobile')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Mobile No.' /> */}
-              <h2 className="h6 mt-3">Mobile No.: +91 {apiData?.mobile}</h2>
+              <h2 className="h6 mt-2">Mobile No.: +91 {apiData?.mobile}</h2>
               {/* <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Email*' /> */}
-              <h2 className="h6">Email: {apiData?.email}</h2>
+              <h2 className="h6">Email id: {apiData?.email}</h2>
 
               {/* <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Address' /> */}
-              <h2 className="h1">Points: 0</h2>
+              <h2 className="h1 mt-3">Points: 0</h2>
             </div>
 
             <div className="text-center py-4">
