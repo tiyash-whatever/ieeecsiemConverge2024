@@ -71,12 +71,12 @@ export default function Register() {
                 />
               </label>
 
-              <input
+              {/* <input
                 onChange={onUpload}
                 type="file"
                 id="profile"
                 name="profile"
-              />
+              /> */}
             </div>
             <label htmlFor="profile">Profile Picture*</label>
             {/* username */}
