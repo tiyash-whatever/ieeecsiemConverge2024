@@ -28,7 +28,8 @@ export const UserSchema = new mongoose.Schema({
     institute: {
         type: String
     },
-    profile: { type: String }
+    profile: { type: String },
+    tid: { type: String }
 
 });
 

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import avatar from "../assets/profile.png";
+import qr from "../assets/img/payqr.png"
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { registerValidation } from "../helper/validate";
 import convertToBase64 from "../helper/convert";
 import { registerUser } from "../helper/helper";
-
 import styles from "../styles/Username.module.css";
+import "../styles/register.css"
 
 export default function Register() {
   const navigate = useNavigate();
@@ -21,7 +22,8 @@ export default function Register() {
       username: "",
       password: "",
       mobile:"",
-      institute:""
+      institute:"",
+      tid:""
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -149,6 +151,18 @@ export default function Register() {
                 placeholder="institute"
               />
               <label htmlFor="institue">Institute Name*</label>
+            </div>
+            <div className="form-floating my-3">
+              <input
+                {...formik.getFieldProps("tid")}
+                className="form-control"
+                type="text"
+                placeholder="tid"
+              />
+              <label htmlFor="tid">UPI Transaction ID*</label>
+            </div>
+            <div className="mt-2 mb-4 payment-QR">
+              <img src={qr} alt="payment QR" />
             </div>
             <button className={styles.btn} type="submit">
               Register
