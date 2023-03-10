@@ -5,5 +5,5 @@ export default {
   EMAIL: "cristal70@ethereal.email", // testing email & password
   PASSWORD: "d9nhE6eybc8AhZAPg5",
   // ATLAS_URI: "mongodb+srv://admin:admin123@cluster0.gay4f6c.mongodb.net/?retryWrites=true&w=majority"
-  ATLAS_URI: "mongodb+srv://anirban:anirbanpass@elevate23.zwc5oiz.mongodb.net/elev?retryWrites=true&w=majority"
+  ATLAS_URI: "mongodb+srv://anirban:anirbanpass@elevate23.zwc5oiz.mongodb.net/elev2?retryWrites=true&w=majority"
 }
