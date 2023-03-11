@@ -5,13 +5,13 @@ import ENV from '../config.js'
 import otpGenerator from 'otp-generator';
 
 // middleware for admin page
-export async function admin(req,res,next){
-    try{
+export async function admin(req, res, next) {
+    try {
         const allUsers = await UserModel.find({});
-        res.send({status:"ok",data:allUsers})
-    }catch(error){
+        res.send({ status: "ok", data: allUsers })
+    } catch (error) {
         console.log(error)
-        return res.status(404).send({error:"admin page api error"})
+        return res.status(404).send({ error: "admin page api error" })
     }
 }
 
@@ -47,7 +47,7 @@ export async function verifyUser(req, res, next) {
 export async function register(req, res) {
 
     try {
-        const { username, password, profile, email, firstName, lastName, institue, mobile, tid } = req.body;
+        const { username, password, profile, email, firstName, lastName, institute, mobile, tid, points } = req.body;
 
         // check the existing user
         const existUsername = new Promise((resolve, reject) => {
@@ -84,8 +84,9 @@ export async function register(req, res) {
                                 firstName,
                                 lastName,
                                 mobile,
-                                institue,
-                                tid
+                                institute,
+                                tid,
+                                points
                             });
 
                             // return save result as a response

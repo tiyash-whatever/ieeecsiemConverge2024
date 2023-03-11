@@ -29,7 +29,8 @@ export const UserSchema = new mongoose.Schema({
         type: String
     },
     profile: { type: String },
-    tid: { type: String }
+    tid: { type: String },
+    points: { type: Number }
 
 });
 

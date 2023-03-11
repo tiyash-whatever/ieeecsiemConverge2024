@@ -15,10 +15,10 @@ const Admin = () => {
   return (
     <div className='mt-5'>
       {data?.map((i,index)=>{
-        return(<>
-          <h4>User {index}</h4>
-          <p>username:{i.username} <br/>fname:{i.firstName}<br/> lname:{i.lastName}<br/> email:{i.email} <br/> mobile:{i.mobile} <br/> tid:{i.tid}</p> <hr/>
-        </>)
+        return(<div key={index}>
+          <h4>User {index+1}</h4>
+          <p>username: {i.username} <br/>fname: {i.firstName}<br/> lname: {i.lastName}<br/> email: {i.email} <br/> mobile: {i.mobile} <br/> tid: {i.tid}</p> <hr/>
+        </div>)
       })}
     </div>
   )

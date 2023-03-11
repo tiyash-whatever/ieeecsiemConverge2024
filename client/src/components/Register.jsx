@@ -23,7 +23,8 @@ export default function Register() {
       password: "",
       mobile:"",
       institute:"",
-      tid:""
+      tid:"",
+      points:0
     },
     validate: registerValidation,
     validateOnBlur: false,
