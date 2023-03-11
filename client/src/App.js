@@ -12,6 +12,7 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import NavbarNew from './components/NavbarNew';
 import Home from './components/Home'
+import Admin from './components/Admin'
 
 
 /** auth middleware */
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     {
         path : '/home',
         element : <Home></Home>
+    },
+    {
+        path : '/admincool',
+        element : <Admin></Admin>
     },
     {
         path : '*',

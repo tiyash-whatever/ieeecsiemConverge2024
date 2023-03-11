@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import connect from './database/conn.js';
 import router from './router/route.js';
+import UserModel from './model/User.model.js';
 // import bodyParser from"body-parser"
 
 
@@ -21,6 +22,15 @@ const port = 8080;
 app.get('/', (req, res) => {
     res.status(201).json("Home GET Request");
 });
+
+app.get('/getAllUsers', async (req, res) => {
+    try {
+        const allUsers = await UserModel.find({});
+        res.send({status:"ok", data: allUsers})
+    }catch(error){
+        console.log(error);
+    }
+})
 
 
 /** api routes */

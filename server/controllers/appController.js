@@ -4,6 +4,17 @@ import jwt from 'jsonwebtoken';
 import ENV from '../config.js'
 import otpGenerator from 'otp-generator';
 
+// middleware for admin page
+export async function admin(req,res,next){
+    try{
+        const allUsers = await UserModel.find({});
+        res.send({status:"ok",data:allUsers})
+    }catch(error){
+        console.log(error)
+        return res.status(404).send({error:"admin page api error"})
+    }
+}
+
 /** middleware for verify user */
 export async function verifyUser(req, res, next) {
     try {
