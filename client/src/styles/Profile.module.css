@@ -9,3 +9,28 @@
 .textbox{
     @apply w-3/4;
 }
+
+.updateBtn{
+    border-radius: 4px;
+    padding: 0.4rem 0.7rem;
+    font-weight: bold;
+}
+.LogoutBtn{
+    width: 70%;
+    font-weight: bolder !important;
+}
+
+.eventCard{
+    background: #0b101a !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.eventCard:hover{
+    box-shadow: 4   px 5px 5px 1px #000000;
+    transform: scale(1.1);
+}

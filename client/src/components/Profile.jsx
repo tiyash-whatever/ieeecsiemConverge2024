@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import avatar from "../assets/profile.png";
-import toast, { Toaster } from "react-hot-toast";
-import { useFormik } from "formik";
-import { profileValidation } from "../helper/validate";
-import convertToBase64 from "../helper/convert";
-import useFetch from "../hooks/fetch.hook";
-import { updateUser } from "../helper/helper";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import avatar from '../assets/profile.png';
+import toast, { Toaster } from 'react-hot-toast';
+import { useFormik } from 'formik';
+import { profileValidation } from '../helper/validate';
+import convertToBase64 from '../helper/convert';
+import useFetch from '../hooks/fetch.hook';
+import { updateUser } from '../helper/helper';
+import { useNavigate } from 'react-router-dom';
 
-import styles from "../styles/Username.module.css";
-import extend from "../styles/Profile.module.css";
+import styles from '../styles/Username.module.css';
+import extend from '../styles/Profile.module.css';
 
 export default function Profile() {
   const [file, setFile] = useState();
@@ -18,12 +18,12 @@ export default function Profile() {
 
   const formik = useFormik({
     initialValues: {
-      username: apiData?.username || "Profile",
-      firstName: apiData?.firstName || "",
-      lastName: apiData?.lastName || "",
-      email: apiData?.email || "",
-      mobile: apiData?.mobile || "",
-      address: apiData?.address || "",
+      username: apiData?.username || 'Profile',
+      firstName: apiData?.firstName || '',
+      lastName: apiData?.lastName || '',
+      email: apiData?.email || '',
+      mobile: apiData?.mobile || '',
+      address: apiData?.address || '',
     },
     enableReinitialize: true,
     validate: profileValidation,
@@ -31,12 +31,12 @@ export default function Profile() {
     validateOnChange: false,
     onSubmit: async (values) => {
       values = await Object.assign(values, {
-        profile: file || apiData?.profile || "",
+        profile: file || apiData?.profile || '',
       });
       let updatePromise = updateUser(values);
 
       toast.promise(updatePromise, {
-        loading: "Updating...",
+        loading: 'Updating...',
         success: <b>Update Successfully...!</b>,
         error: <b>Could not Update!</b>,
       });
@@ -51,8 +51,8 @@ export default function Profile() {
 
   // logout handler function
   function userLogout() {
-    localStorage.removeItem("token");
-    navigate("/");
+    localStorage.removeItem('token');
+    navigate('/');
   }
 
   if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
@@ -68,6 +68,7 @@ export default function Profile() {
         <div className="profile form-bx mt-5">
           <div className="title flex flex-col items-center">
             <h4 className="text-5xl font-bold">{apiData?.username}</h4>
+
             {/* <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
                 You can update the details.
             </span> */}
@@ -91,39 +92,105 @@ export default function Profile() {
                   name="profile"
                 />
               </div>
-              <button className="" type="submit">
+              <button className={extend.updateBtn} type="submit">
                 Update Avatar
               </button>
             </div>
 
-            <div className="textbox flex flex-col items-center gap-6">
+            <div className="textbox flex flex-col items-center gap-2">
               <div className="name flex gap-10">
                 {/* <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='FirstName' /> */}
-                <h2 className="h5 mt-4">
-                  Hi! {apiData?.firstName} {apiData?.lastName} It's good to see
-                  you here
+                <h2 className="h4 mt-5">
+                  Hey {apiData?.firstName} {apiData?.lastName} !
                 </h2>
                 {/* <input {...formik.getFieldProps('lastName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='LastName' /> */}
               </div>
+              <h2 className="h4 pl-2 pr-2">It's good to see you here!!</h2>
 
               {/* <input {...formik.getFieldProps('mobile')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Mobile No.' /> */}
-              <h2 className="h5" >Mobile No.: {apiData?.mobile}</h2>
+              <h2 className="h6 mt-2">Mobile No.: +91 {apiData?.mobile}</h2>
               {/* <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Email*' /> */}
-              <h2 className="h5">Email: {apiData?.email}</h2>
+              <h2 className="h6">Email id: {apiData?.email}</h2>
 
               {/* <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Address' /> */}
-              <h2 className="h1">Points: 0</h2>
+              <h2 className="h1 mt-3">Points: 0</h2>
             </div>
 
             <div className="text-center py-4">
               <span className="text-gray-500">
-                come back later?{" "}
-                <button onClick={userLogout} className="btn btn-lg btn-primary btn-login fw-bold text-uppercase" to="/">
+                come back later?{' '}
+                <button
+                  onClick={userLogout}
+                  className={`btn btn-lg btn-primary btn-login fw-bold mt-3 ${extend.LogoutBtn}`}
+                  to="/"
+                >
                   Logout
                 </button>
               </span>
             </div>
           </form>
+        </div>
+      </div>
+      <h1 className="h1 text-center mt-5 mb-4">EVENTS</h1>
+      <div className="row ">
+        <div className="col-lg-4 col-md-6">
+          <div
+            className={`card ${extend.eventCard} mt-4 mb-5`}
+            onClick={() => {
+              window.location.href = '/';
+            }}
+          >
+            <img
+              className="card-img-top"
+              src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+              alt="CardImage"
+            />
+            <div className="card-body">
+              <div className="card-text CardText text-center">
+                <h1 className="h2 text-center mt-3">EventName</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6">
+          <div
+            className={`card ${extend.eventCard} mt-4 mb-5`}
+            onClick={() => {
+              window.location.href = '/';
+            }}
+          >
+            <img
+              className="card-img-top"
+              src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+              alt="CardImage"
+            />
+            <div className="card-body">
+              <div className="card-text CardText text-center">
+                <h1 className="h2 text-center mt-3">EventName</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6">
+          <div
+            className={`card ${extend.eventCard} mt-4 mb-5`}
+            onClick={() => {
+              window.location.href = '/';
+            }}
+          >
+            <img
+              className="card-img-top"
+              src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+              alt="CardImage"
+            />
+            <div className="card-body">
+              <div className="card-text CardText text-center">
+                <h1 className="h2 text-center mt-3">EventName</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
