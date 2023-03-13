@@ -20,6 +20,7 @@ export default function Profile() {
   const [file, setFile] = useState();
   const [{ isLoading, apiData, serverError }] = useFetch();
   const navigate = useNavigate();
+  const [showTalks, setShowTalks] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -106,10 +107,10 @@ export default function Profile() {
                   />
                 </div>
                 <div className="note">*File Size Limit: 64KB</div>
+                <div className="note">*Upload file and click Update Avatar</div>
                 <div className={extend.updateBtn} type="submit">
                   Update Avatar
                 </div>
-
               </div>
 
               <div className="textbox flex flex-col items-center gap-2">
@@ -144,8 +145,16 @@ export default function Profile() {
             </form>
           </div>
         </div>
-        <h1 id="events" className="h1 text-center mt-5 mb-4">EVENTS</h1>
-        <div className="row ">
+        <h1 id="events" className="h1 text-center mt-5 mb-4">
+          EVENTS
+        </h1>
+        <h1 id="talks-head" className="h1 text-center mt-5 mb-4" onClick={()=>{
+          setShowTalks(!showTalks);
+        }}>
+            TALKS <FontAwesomeIcon icon={faChevronDown} />
+          </h1>
+          {showTalks? <>
+            <div id="talks" className="row">
           <div className="col-lg-4 col-md-6">
             <div
               className={`card ${extend.eventCard} mt-4 mb-5`}
@@ -206,6 +215,9 @@ export default function Profile() {
             </div>
           </div>
         </div>
+          </>: null}
+        
+
       </div>
     </>
   );
