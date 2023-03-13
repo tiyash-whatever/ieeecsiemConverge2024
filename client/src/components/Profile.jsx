@@ -62,7 +62,7 @@ export default function Profile() {
     navigate("/");
   }
 
-  if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
+  if (isLoading) return <h1 className="text-2xl font-bold">Loading...</h1>;
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
@@ -108,9 +108,9 @@ export default function Profile() {
                 </div>
                 <div className="note">*File Size Limit: 64KB</div>
                 <div className="note">*Upload file and click Update Avatar</div>
-                <div className={extend.updateBtn} type="submit">
+                <button className={extend.updateBtn} type="submit">
                   Update Avatar
-                </div>
+                </button>
               </div>
 
               <div className="textbox flex flex-col items-center gap-2">
