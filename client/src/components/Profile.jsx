@@ -148,76 +148,81 @@ export default function Profile() {
         <h1 id="events" className="h1 text-center mt-5 mb-4">
           EVENTS
         </h1>
-        <h1 id="talks-head" className="h1 text-center mt-5 mb-4" onClick={()=>{
-          setShowTalks(!showTalks);
-        }}>
-            TALKS <FontAwesomeIcon icon={faChevronDown} />
-          </h1>
-          {showTalks? <>
+        <h1
+          id="talks-head"
+          className="h1 text-center mt-5 mb-4"
+          style={{cursor:"pointer"}}
+          onClick={() => {
+            setShowTalks(!showTalks);
+          }}
+        >
+          TALKS <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showTalks ? (
+          <>
             <div id="talks" className="row">
-          <div className="col-lg-4 col-md-6">
-            <div
-              className={`card ${extend.eventCard} mt-4 mb-5`}
-              onClick={() => {
-                window.location.href = "/";
-              }}
-            >
-              <img
-                className="card-img-top"
-                src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                alt="CardImage"
-              />
-              <div className="card-body">
-                <div className="card-text CardText text-center">
-                  <h1 className="h2 text-center mt-3">EventName</h1>
+              <div className="col-lg-4 col-md-6">
+                <div
+                  className={`card ${extend.eventCard} mt-4 mb-5`}
+                  onClick={() => {
+                    window.location.href = "/";
+                  }}
+                >
+                  <img
+                    className="card-img-top"
+                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+                    alt="CardImage"
+                  />
+                  <div className="card-body">
+                    <div className="card-text CardText text-center">
+                      <h1 className="h2 text-center mt-3">EventName</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6">
+                <div
+                  className={`card ${extend.eventCard} mt-4 mb-5`}
+                  onClick={() => {
+                    window.location.href = "/";
+                  }}
+                >
+                  <img
+                    className="card-img-top"
+                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+                    alt="CardImage"
+                  />
+                  <div className="card-body">
+                    <div className="card-text CardText text-center">
+                      <h1 className="h2 text-center mt-3">EventName</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6">
+                <div
+                  className={`card ${extend.eventCard} mt-4 mb-5`}
+                  onClick={() => {
+                    window.location.href = "/";
+                  }}
+                >
+                  <img
+                    className="card-img-top"
+                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+                    alt="CardImage"
+                  />
+                  <div className="card-body">
+                    <div className="card-text CardText text-center">
+                      <h1 className="h2 text-center mt-3">EventName</h1>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div
-              className={`card ${extend.eventCard} mt-4 mb-5`}
-              onClick={() => {
-                window.location.href = "/";
-              }}
-            >
-              <img
-                className="card-img-top"
-                src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                alt="CardImage"
-              />
-              <div className="card-body">
-                <div className="card-text CardText text-center">
-                  <h1 className="h2 text-center mt-3">EventName</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div
-              className={`card ${extend.eventCard} mt-4 mb-5`}
-              onClick={() => {
-                window.location.href = "/";
-              }}
-            >
-              <img
-                className="card-img-top"
-                src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                alt="CardImage"
-              />
-              <div className="card-body">
-                <div className="card-text CardText text-center">
-                  <h1 className="h2 text-center mt-3">EventName</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          </>: null}
-        
-
+          </>
+        ) : null}
       </div>
     </>
   );
