@@ -105,9 +105,11 @@ export default function Profile() {
                     name="profile"
                   />
                 </div>
+                <div className="note">*File Size Limit: 64KB</div>
                 <div className={extend.updateBtn} type="submit">
                   Update Avatar
                 </div>
+
               </div>
 
               <div className="textbox flex flex-col items-center gap-2">

@@ -30,11 +30,11 @@ const CountDown = () => {
       // check if less than 10 then we need to
       // add '0' at the beginning of the variable
       setTimer(
-        (days > 9 ? days : "0" + days)+" Days "+
+        (days > 9 ? days : "0" + days)+" Days : "+
         (hours > 9 ? hours : "0" + hours) +
-          " Hrs " +
+          " Hrs : " +
           (minutes > 9 ? minutes : "0" + minutes) +
-          " Min " +
+          " Min : " +
           (seconds > 9 ? seconds : "0" + seconds)+" Secs"
       );
     }
@@ -70,8 +70,8 @@ const CountDown = () => {
   };
   return (
     <div >
-      <h2 className="display-5 text-center counter fst-italic ">{timer}</h2>
-      <h3 className="h2 fst-italic fw-bold text-center" style={{color:"#B8B8B8",}}> To Go....</h3>
+      <h2 className="display-5 mt-5 counter fw-bold ">{timer}</h2>
+      <p> To Go....</p>
       {/* <button onClick={onClickReset}>Reset</button> */}
     </div>
   );
