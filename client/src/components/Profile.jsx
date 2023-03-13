@@ -108,7 +108,7 @@ export default function Profile() {
                 </div>
                 <div className="note">*File Size Limit: 64KB</div>
                 <div className="note">*Upload file and click Update Avatar</div>
-                <button className={extend.updateBtn} type="submit">
+                <button id="upload-avatar" className={extend.updateBtn} type="submit">
                   Update Avatar
                 </button>
               </div>

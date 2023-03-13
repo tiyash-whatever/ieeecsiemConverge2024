@@ -986,3 +986,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     color:#B8B8B8;
     font-size:x-small;
 }
+
+#upload-avatar{
+    background-color: transparent;
+    color:rgb(54, 254, 211);
+    border:none;
+}
