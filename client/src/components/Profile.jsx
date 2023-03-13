@@ -93,7 +93,7 @@ export default function Profile() {
                 <div className="profile flex justify-center pt-4">
                   <label htmlFor="profile">
                     <img
-                      src={apiData?.profile || file || avatar}
+                      src={file || apiData?.profile || avatar}
                       className={`${styles.profile_img} ${extend.profile_img}`}
                       alt="avatar"
                     />
@@ -108,7 +108,11 @@ export default function Profile() {
                 </div>
                 <div className="note">*File Size Limit: 64KB</div>
                 <div className="note">*Upload file and click Update Avatar</div>
-                <button id="upload-avatar" className={extend.updateBtn} type="submit">
+                <button
+                  id="upload-avatar"
+                  className={extend.updateBtn}
+                  type="submit"
+                >
                   Update Avatar
                 </button>
               </div>
@@ -151,7 +155,7 @@ export default function Profile() {
         <h1
           id="talks-head"
           className="h1 text-center mt-5 mb-4"
-          style={{cursor:"pointer"}}
+          style={{ cursor: "pointer" }}
           onClick={() => {
             setShowTalks(!showTalks);
           }}
