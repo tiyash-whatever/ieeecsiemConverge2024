@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import CountDown from "./CountDown";
 import headerImg from "../assets/img/abc.png";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+// import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -59,6 +60,7 @@ const Banner = () => {
                 <h1>{`#`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "TowardsBetterThings", "TowardsBetterThings", "TowardsBetterThings" ]'><span className="wrap">{text}</span></span></h1>
                   <p>ELEVATE '22 is the annual event of IEEE IEM Student Branch. This is the second edition, and the first edition, STACK '21, was a huge success. It saw huge participation from across India. It will have scope for both online and offline participation. Seminars, hands on workshops, numerous competitions, internship fair, all add to the highlights of ELEVATE'22. And in addition to the unique events, it creates a platform for students to interact with eminent speakers from various leading industries..</p>
                   {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
+                  <CountDown />
               </div>}
             </TrackVisibility>
           </Col>

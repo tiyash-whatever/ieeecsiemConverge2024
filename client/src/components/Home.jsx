@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import Projects from "./Projects";
+import NavbarNew from "./NavbarNew"
 import RegistratonDetails from "./RegistratonDetails";
 import { Skills } from "./Skills";
 import { Footer } from "./Footer";
@@ -8,10 +9,12 @@ import "../styles/home.css";
 // import logo from '../images/logo.png'
 import vdo from "../assets/videos/elevateVideo.m4v";
 import Contact from "./Contact";
+import Colaborators from "./Colaborators";
 
 const Home = () => {
   return (
     <>
+    <NavbarNew/>
       <div className="container-fluid video-container text-center" id="home">
         <video
           src={vdo}
@@ -31,6 +34,7 @@ const Home = () => {
           <Projects />
           <Skills />
           <RegistratonDetails />
+          <Colaborators />
           <Footer />
         </div>
       </div>

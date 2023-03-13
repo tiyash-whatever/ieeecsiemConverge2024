@@ -21,48 +21,48 @@ import { AuthorizeUser, ProtectRoute } from './middleware/auth'
 /** root routes */
 const router = createBrowserRouter([
     {
-        path : '/',
-        element : <Username></Username>
+        path: '/',
+        element: <Username></Username>
     },
     {
-        path : '/register',
-        element : <Register></Register>
+        path: '/register',
+        element: <Register></Register>
     },
     {
-        path : '/password',
-        element : <ProtectRoute><Password /></ProtectRoute>
+        path: '/password',
+        element: <ProtectRoute><Password /></ProtectRoute>
     },
     {
-        path : '/profile',
-        element : <AuthorizeUser><Profile /></AuthorizeUser>
+        path: '/profile',
+        element: <AuthorizeUser><Profile /></AuthorizeUser>
     },
     {
-        path : '/recovery',
-        element : <Recovery></Recovery>
+        path: '/recovery',
+        element: <Recovery></Recovery>
     },
     {
-        path : '/reset',
-        element : <Reset></Reset>
+        path: '/reset',
+        element: <Reset></Reset>
     },
     {
-        path : '/home',
-        element : <Home></Home>
+        path: '/home',
+        element: <Home></Home>
     },
     {
-        path : '/admincool',
-        element : <Admin></Admin>
+        path: '/admincool',
+        element: <Admin></Admin>
     },
     {
-        path : '*',
-        element : <PageNotFound></PageNotFound>
+        path: '*',
+        element: <PageNotFound></PageNotFound>
     },
 ])
 
 export default function App() {
-  return (
-    <main>
-        <NavbarNew/>
-        <RouterProvider router={router}></RouterProvider>
-    </main>
-  )
+    return (
+        <main>
+            {/* <NavbarNew /> */}
+            <RouterProvider router={router}></RouterProvider>
+        </main>
+    )
 }

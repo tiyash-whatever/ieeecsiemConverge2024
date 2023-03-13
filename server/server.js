@@ -26,9 +26,43 @@ app.get('/', (req, res) => {
 app.get('/getAllUsers', async (req, res) => {
     try {
         const allUsers = await UserModel.find({});
-        res.send({status:"ok", data: allUsers})
-    }catch(error){
+        res.send({ status: "ok", data: allUsers })
+    } catch (error) {
         console.log(error);
+    }
+})
+
+app.post("/deleteUser", async (req, res) => {
+    const { userid } = req.body;
+    try {
+        UserModel.deleteOne(
+            { _id: userid }, function (err) { console.log(err) }
+        )
+        res.send({ status: "ok", data: "Deleted" })
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.post("/incPointsby10", async (req, res) => {
+    const { userid, points } = req.body;
+    try {
+        let updatedPoints = points+10;
+        UserModel.findByIdAndUpdate(userid, { $set: { points: updatedPoints } }, function (err) { console.log(err) })
+        res.send({ status: "ok", data: "points increased" })
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+app.post("/decPointsby10", async (req, res) => {
+    const { userid, points } = req.body;
+    try {
+        let updatedPoints = points-10;
+        UserModel.findByIdAndUpdate(userid, { $set: { points: updatedPoints } }, function (err) { console.log(err) })
+        res.send({ status: "ok", data: "points decreased" })
+    } catch (error) {
+        console.log(error)
     }
 })
 

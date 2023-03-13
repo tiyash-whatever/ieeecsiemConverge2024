@@ -1,0 +1,10 @@
+.greenButton {
+  background-color: #00ffcc;
+  border: 2px solid #00ffcc;
+  color: #0b101a;
+}
+
+.greenButton:hover {
+  background-color: #017c64;
+  border: 2px solid #00ffcc;
+}

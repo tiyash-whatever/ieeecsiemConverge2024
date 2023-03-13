@@ -7,6 +7,7 @@ import { usernameValidate } from "../helper/validate";
 import { useAuthStore } from "../store/store";
 
 import styles from "../styles/Username.module.css";
+import Navbar from "./Navbar";
 
 export default function Username() {
   const navigate = useNavigate();
@@ -26,34 +27,39 @@ export default function Username() {
   });
 
   return (
-    <div className="container ">
-      <Toaster position="top-center" reverseOrder={false}></Toaster>
+    <>
+      <Navbar />
+      <div className="container ">
+        <Toaster position="top-center" reverseOrder={false}></Toaster>
 
-      <div className="flex justify-center items-center h-screen">
-        {/* <div className={styles.glass}> */}
-        <div className="form-bx">
-          <div className="title flex flex-col items-center">
-            <h4 className="text-5xl font-bold">Let's Elevate</h4>
-          </div>
+        <div className="flex justify-center items-center h-screen">
+          {/* <div className={styles.glass}> */}
+          <div className="form-bx">
+            <div className="title flex flex-col items-center">
+              <h4 className="text-5xl font-bold">Let's Elevate</h4>
+            </div>
 
-          <form className="py-1 " onSubmit={formik.handleSubmit}>
-            {/* <div className='profile flex justify-center py-4'>
+            <form className="py-1 " onSubmit={formik.handleSubmit}>
+              {/* <div className='profile flex justify-center py-4'>
                   <img src={avatar} className={styles.profile_img} alt="avatar" />
               </div> */}
-            <div className="form-floating my-3">
-              <input
-                {...formik.getFieldProps("username")}
-                className="form-control"
-                type="text"
-                placeholder="Username"
-              />
-              <label htmlFor="username">Username</label>
-            </div>
-            <button className="btn btn-lg btn-primary btn-login fw-bold" type="submit">
+              <div className="form-floating my-3">
+                <input
+                  {...formik.getFieldProps("username")}
+                  className="form-control"
+                  type="text"
+                  placeholder="Username"
+                />
+                <label htmlFor="username">Username</label>
+              </div>
+              <button
+                className="btn btn-lg btn-primary btn-login fw-bold"
+                type="submit"
+              >
                 Next
-            </button>
+              </button>
 
-            {/* <div className="textbox flex flex-col items-center gap-6">
+              {/* <div className="textbox flex flex-col items-center gap-6">
               <input
                 {...formik.getFieldProps("username")}
                 className={styles.textbox}
@@ -65,17 +71,18 @@ export default function Username() {
               </button>
             </div> */}
 
-            <div className="text-center py-4">
-              <span className="text-gray-500">
-                Not a Member{" "}
-                <Link className="" to="/register">
-                  Register Now
-                </Link>
-              </span>
-            </div>
-          </form>
+              <div className="text-center py-4">
+                <span className="text-gray-500">
+                  Not a Member{" "}
+                  <Link className="" to="/register">
+                    Register Now
+                  </Link>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

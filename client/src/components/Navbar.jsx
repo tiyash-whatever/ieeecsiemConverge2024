@@ -27,7 +27,6 @@ const NavbarNew = () => {
   };
 
   return (
-    // <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/home">
@@ -39,7 +38,7 @@ const NavbarNew = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
-                href="#home"
+                href="/home"
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
@@ -47,52 +46,19 @@ const NavbarNew = () => {
               >
                 Home
               </Nav.Link>
-
               <Nav.Link
-                href="#about"
+                href="/profile"
                 className={
-                  activeLink === "about" ? "active navbar-link" : "navbar-link"
+                  activeLink === "profile" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("about")}
+                onClick={() => onUpdateActiveLink("profile")}
               >
-                About
-              </Nav.Link>
-              <Nav.Link
-                href="#schedule"
-                className={
-                  activeLink === "schedule"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("schedule")}
-              >
-                Schedule
-              </Nav.Link>
-              <Nav.Link
-                href="#guests"
-                className={
-                  activeLink === "guests" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("guests")}
-              >
-                Guests
-              </Nav.Link>
-              <Nav.Link
-                href="#register"
-                className={
-                  activeLink === "register"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("register")}
-              >
-                Register
+                Profile
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    /* </Router> */
   );
 };
 export default NavbarNew;
