@@ -77,10 +77,10 @@ const Projects = () => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row> */}
-                        {/* <div class="tl-content" style={{ top: "10%" }}>
+                        <div class="tl-content" style={{ top: "10%" }}>
                           <p>
                             <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              10:00 AM - 10:45 AM
+                              04:30 PM - 05:30 PM
                             </i>{" "}
                             <span
                               style={{ paddingLeft: "20px", fontStyle: "bold" }}
@@ -91,13 +91,13 @@ const Projects = () => {
 
                           <p>
                             <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              11:00 AM - 12:00 PM
+                              05:30 PM - 06:30 PM
                             </i>{" "}
                             <span style={{ paddingLeft: "20px" }}>
-                              Networking Session
+                              Orientation {"(Rules)"}
                             </span>{" "}
                           </p>
-                          <p>
+                          {/* <p>
                             <i class="fa fa-clock-o" style={{ color: "white" }}>
                               12:00 PM - 1:00 PM
                             </i>{" "}
@@ -129,18 +129,219 @@ const Projects = () => {
                               Physical and computational modeling of smart homes
                             </span>{" "}
                           </p>
-                          <ul>Speaker : Damla Turgut</ul>
-                        </div> */}
-                        <div>Coming Soon!</div>
+                          <ul>Speaker : Damla Turgut</ul> */}
+                        </div>
+                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <div>Coming Soon!</div>
+                        <div class="tl-content" style={{ top: "10%" }}>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:00 AM - 10:15 AM
+                            </i>{" "}
+                            <span
+                              style={{ paddingLeft: "20px", fontStyle: "bold" }}
+                            >
+                              Day briefing
+                            </span>
+                          </p>
+
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:15 AM - 11:15 AM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Seminar: Arijit Hazra
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              11:30 AM - 1:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Workshop - 3D printing {"(TAL)"} / Coding club{" "}
+                              {"( app dev)"}
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Women entrepreneurship in the wake of economic
+                            liberalisation and globalisation.
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              1:30 PM - 2:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Lunch break
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Geeks For Geeks <br />
+                            Speaker : Dr. Mousiki Kar
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              3:00 PM - 4:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Panel talk
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              4:30 PM - 6:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Competition - Ideathon
+                            </span>{" "}
+                          </p>
+                          {/* <ul>Speaker : Damla Turgut</ul> */}
+                        </div>
+                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <div>Coming Soon!</div>
+                        <div class="tl-content" style={{ top: "10%" }}>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:00 AM - 10:15 AM
+                            </i>{" "}
+                            <span
+                              style={{ paddingLeft: "20px", fontStyle: "bold" }}
+                            >
+                              Day briefing
+                            </span>
+                          </p>
+
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:15 AM - 12:15 AM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Workshop - IoT {"(TAL)"}
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              12:30 PM - 1:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Seminar: Subodh Gajare
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Women entrepreneurship in the wake of economic
+                            liberalisation and globalisation.
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              1:30 PM - 2:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Lunch break
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Geeks For Geeks <br />
+                            Speaker : Dr. Mousiki Kar
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              2:30 PM - 3:30 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Seminar: Shivam Avilash
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              3:30 PM - 5:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Competition
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              5:00 PM - 6:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Seminar: Indrajit Lahiri
+                            </span>{" "}
+                          </p>
+                          {/* <ul>Speaker : Damla Turgut</ul> */}
+                        </div>
+                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="fourth">
-                        <div>Coming Soon!</div>
+                        <div class="tl-content" style={{ top: "10%" }}>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:00 AM - 10:15 AM
+                            </i>{" "}
+                            <span
+                              style={{ paddingLeft: "20px", fontStyle: "bold" }}
+                            >
+                              Day briefing
+                            </span>
+                          </p>
+
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              10:15 AM - 11:15 AM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>Seminar</span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              11:30 AM - 1:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "20px" }}>
+                              Competition: Blind coding
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Women entrepreneurship in the wake of economic
+                            liberalisation and globalisation.
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              1:00 PM - 2:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Lunch break
+                            </span>{" "}
+                          </p>
+                          {/* <ul>
+                            -Geeks For Geeks <br />
+                            Speaker : Dr. Mousiki Kar
+                          </ul> */}
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              2:00 PM - 3:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Point Bidding + Prize Distribution
+                            </span>{" "}
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              3:30 PM - 6:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Cultural
+                            </span>{" "}
+                          </p>
+                          {/* <p>
+                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                              5:00 PM - 6:00 PM
+                            </i>{" "}
+                            <span style={{ paddingLeft: "40px" }}>
+                              Seminar: Indrajit Lahiri
+                            </span>{" "}
+                          </p> */}
+                          {/* <ul>Speaker : Damla Turgut</ul> */}
+                        </div>
+                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
