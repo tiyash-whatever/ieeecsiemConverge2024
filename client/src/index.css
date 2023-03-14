@@ -1030,4 +1030,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    /* box-shadow:#00ffcc; */
+}
+.event-tab:hover{
+    background-color: rgba(0, 0, 0, 0.4);
 }
