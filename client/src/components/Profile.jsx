@@ -15,12 +15,19 @@ import Navbar from "./Navbar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import Events from "./Events";
+import ComingSoon from "./ComingSoon";
 
 export default function Profile() {
   const [file, setFile] = useState();
   const [{ isLoading, apiData, serverError }] = useFetch();
   const navigate = useNavigate();
   const [showTalks, setShowTalks] = useState(false);
+  const [showInauguration, setShowInauguration] = useState(false);
+  const [showSeminar, setShowSeminar] = useState(false);
+  const [showWorkshop, setShowWorkshop] = useState(false);
+  const [showCompetitions, setShowCompetitions] = useState(false);
+  const [showGames, setShowGames] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -152,24 +159,68 @@ export default function Profile() {
         <div className="container-rules">
           <h1 className="display-5 text-center">Elevate Rules</h1>
           <p>
-            1. The event will have seminars, workshops , inauguration talk , panel
-            discussions , competitions and games. For attending each event you
-            will get a certain number of points. The points you gather will be
-            reflected in your account on the website
+            1. The event will have seminars, workshops , inauguration talk ,
+            panel discussions , competitions and games. For attending each event
+            you will get a certain number of points. The points you gather will
+            be reflected in your account on the website
           </p>
           <p>
-            2. You will get a chance to acquire more than 500 points throughout the
-            event in a span of 4 days. You need a minimum of 350 points to get a
-            certificate,
+            2. You will get a chance to acquire more than 500 points throughout
+            the event in a span of 4 days. You need a minimum of 350 points to
+            get a certificate,
           </p>
           <p>
-            3. You will get chances to win amazing gifts using the points that you
-            collected.
+            3. You will get chances to win amazing gifts using the points that
+            you collected.
           </p>
         </div>
         <h1 id="events" className="display-5 text-center mt-5 mb-4">
           Events
         </h1>
+        <h1
+          id="inaugration-head"
+          className="h2 text-center mt-5 mb-4"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setShowInauguration(!showInauguration);
+          }}
+        >
+          INAUGRATION {"[Points: 60]"} <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showInauguration ? <ComingSoon /> : null}
+        <h1
+          id="talks-head"
+          className="h2 text-center mt-5 mb-4"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setShowSeminar(!showSeminar);
+          }}
+        >
+          SEMINARS{"[Points: 20]"} <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showSeminar ? <ComingSoon /> : null}
+        <h1
+          id="talks-head"
+          className="h2 text-center mt-5 mb-4"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setShowWorkshop(!showWorkshop);
+          }}
+        >
+          WORKSHOPS {"[Points: 50]"} <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showWorkshop ? <ComingSoon /> : null}
+        <h1
+          id="talks-head"
+          className="h2 text-center mt-5 mb-4"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setShowCompetitions(!showCompetitions);
+          }}
+        >
+          COMPETITIONS {"[Points: 50]"} <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showCompetitions ? <ComingSoon /> : null}
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4"
@@ -178,73 +229,20 @@ export default function Profile() {
             setShowTalks(!showTalks);
           }}
         >
-          TALKS{"[Points: 10]"} <FontAwesomeIcon icon={faChevronDown} />
+          PANEL TALKS{"[Points: 60]"} <FontAwesomeIcon icon={faChevronDown} />
         </h1>
-        {showTalks ? (
-          <>
-            <div id="talks" className="row">
-              <div className="col-lg-4 col-md-6">
-                <div
-                  className={`card ${extend.eventCard} mt-4 mb-5`}
-                  onClick={() => {
-                    window.location.href = "/";
-                  }}
-                >
-                  <img
-                    className="card-img-top"
-                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                    alt="CardImage"
-                  />
-                  <div className="card-body">
-                    <div className="card-text CardText text-center">
-                      <h1 className="h2 text-center mt-3">EventName</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div
-                  className={`card ${extend.eventCard} mt-4 mb-5`}
-                  onClick={() => {
-                    window.location.href = "/";
-                  }}
-                >
-                  <img
-                    className="card-img-top"
-                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                    alt="CardImage"
-                  />
-                  <div className="card-body">
-                    <div className="card-text CardText text-center">
-                      <h1 className="h2 text-center mt-3">EventName</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div
-                  className={`card ${extend.eventCard} mt-4 mb-5`}
-                  onClick={() => {
-                    window.location.href = "/";
-                  }}
-                >
-                  <img
-                    className="card-img-top"
-                    src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-                    alt="CardImage"
-                  />
-                  <div className="card-body">
-                    <div className="card-text CardText text-center">
-                      <h1 className="h2 text-center mt-3">EventName</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </>
-        ) : null}
+        {showTalks ? <ComingSoon /> : null}
+        <h1
+          id="talks-head"
+          className="h2 text-center mt-5 mb-4"
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setShowGames(!showGames);
+          }}
+        >
+          GAMES {/*"[Points: 10]"*/} <FontAwesomeIcon icon={faChevronDown} />
+        </h1>
+        {showGames ? <ComingSoon /> : null}
       </div>
     </>
   );
