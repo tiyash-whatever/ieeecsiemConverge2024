@@ -328,7 +328,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .signup {
-    margin-top: 5%;
+    margin-bottom: 5%;
     width: 500px;
 }
 
@@ -983,6 +983,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     z-index: 1;
 }
 
+@media only screen and (max-width: 600px) {
+    .fixed-btn {
+        border: 2px solid #0b101a
+    }
+}
+
 .counter {
     /* color:#00ffcc; */
 }
@@ -1010,6 +1016,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 1.2rem;
     text-align: justify;
 }
+@media only screen and (max-width: 600px) {
+    .container-rules {
+        padding: 50px 20px;
+    }
+}
 
 #comingsoon-img {
     width: 50%;
@@ -1027,13 +1038,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border: 3px solid #00ffcc;
     margin: 10px 100px;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
+    background-color: #00ffcc;
+    transition: all 0.2s;
+    color:#0b101a;
     /* box-shadow:#00ffcc; */
 }
 .event-tab:hover{
     background-color: rgba(0, 0, 0, 0.4);
+    color:#fff;
+}
+@media only screen and (max-width: 600px) {
+    .event-tab {
+        margin:0;
+        font-size: 20px;
+    }
 }
 .collab img{
     margin: 5px;

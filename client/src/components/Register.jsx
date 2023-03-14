@@ -58,6 +58,22 @@ export default function Register() {
       <div className="container mx-auto">
         <Toaster position="top-center" reverseOrder={false}></Toaster>
 
+        <div className="container-rules">
+            <h1 className="h1 text-center">Registration Rules</h1>
+            <p>
+              1. Click on the registration link to register for Elevate. Pay a
+              minimal amount of Rs 100/- and log in to your account. Your
+              candidature is subject to the verification of registration
+              payment, you'll get a confirmation mail within 24hrs. The account
+              of defaulters will be removed.
+            </p>
+            <p>
+              2. After logging in you will see a list of events. From there you can
+              register for the competitions. Events {">"} Competitions {">"} Click on
+              the Poster {">"} Register for free .
+            </p>
+          </div>
+
         <div className="flex justify-center items-center">
           {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
           <div className="signup form-bx">
@@ -218,21 +234,7 @@ export default function Register() {
           </div>
           
         </div>
-        <div className="container-rules">
-            <h1 className="h1 text-center">Registration Rules</h1>
-            <p>
-              1. Click on the registration link to register for Elevate. Pay a
-              minimal amount of Rs 100/- and log in to your account. Your
-              candidature is subject to the verification of registration
-              payment, you'll get a confirmation mail within 24hrs. The account
-              of defaulters will be removed.
-            </p>
-            <p>
-              2. After logging in you will see a list of events. From there you can
-              register for the competitions. Events {">"} Competitions {">"} Click on
-              the Poster {">"} Register for free .
-            </p>
-          </div>
+        
       </div>
     </>
   );
