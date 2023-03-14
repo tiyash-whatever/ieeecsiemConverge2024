@@ -14,7 +14,11 @@ import extend from "../styles/Profile.module.css";
 import Navbar from "./Navbar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faCoffee,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import Events from "./Events";
 import ComingSoon from "./ComingSoon";
 
@@ -177,70 +181,106 @@ export default function Profile() {
         <h1 id="events" className="display-5 text-center mt-5 mb-4">
           Events
         </h1>
-        <h1
+        <div
           id="inaugration-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowInauguration(!showInauguration);
           }}
         >
-          INAUGRATION {"[Points: 60]"} <FontAwesomeIcon icon={faChevronDown} />
-        </h1>
+          <div>
+            INAUGRATION
+            {" [Points: 60]"}
+          </div>
+          {showInauguration ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </div>
         {showInauguration ? <ComingSoon /> : null}
-        <h1
+        <div
           id="talks-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowSeminar(!showSeminar);
           }}
         >
-          SEMINARS{"[Points: 20]"} <FontAwesomeIcon icon={faChevronDown} />
-        </h1>
+          <div>
+            SEMINAR
+            {" [Points: 20]"}
+          </div>{" "}
+          {showSeminar ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </div>
         {showSeminar ? <ComingSoon /> : null}
-        <h1
+        <div
           id="talks-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowWorkshop(!showWorkshop);
           }}
         >
-          WORKSHOPS {"[Points: 50]"} <FontAwesomeIcon icon={faChevronDown} />
-        </h1>
+          <div> WORKSHOPS {" [Points: 50]"}</div>{" "}
+          {showWorkshop ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </div>
         {showWorkshop ? <ComingSoon /> : null}
-        <h1
+        <div
           id="talks-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowCompetitions(!showCompetitions);
           }}
         >
-          COMPETITIONS {"[Points: 50]"} <FontAwesomeIcon icon={faChevronDown} />
-        </h1>
+          <div>COMPETITIONS {" [Points: 50]"}</div>{" "}
+          {showCompetitions ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </div>
         {showCompetitions ? <ComingSoon /> : null}
         <h1
           id="talks-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowTalks(!showTalks);
           }}
         >
-          PANEL TALKS{"[Points: 60]"} <FontAwesomeIcon icon={faChevronDown} />
+          <div>PANEL TALKS{" [Points: 60]"}</div>{" "}
+          {showTalks ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
         </h1>
         {showTalks ? <ComingSoon /> : null}
         <h1
           id="talks-head"
-          className="h2 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4 event-tab"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowGames(!showGames);
           }}
         >
-          GAMES {/*"[Points: 10]"*/} <FontAwesomeIcon icon={faChevronDown} />
+          <div>GAMES</div>{" "}
+          {showGames ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
         </h1>
         {showGames ? <ComingSoon /> : null}
       </div>
