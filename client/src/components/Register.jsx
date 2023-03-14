@@ -219,19 +219,19 @@ export default function Register() {
           
         </div>
         <div className="container-rules">
-            <h1 className="h1 text-center">Registration Rules</h1>
+            <h1 className="h1 text-center mt-5 mb-4">Registration Rules</h1>
             <p>
               1. Click on the registration link to register for Elevate. Pay a
               minimal amount of Rs 100/- and log in to your account. Your
               candidature is subject to the verification of registration
               payment, you'll get a confirmation mail within 24hrs. The account
               of defaulters will be removed.
-            </p>
+            </p><br></br>
             <p>
               2. After logging in you will see a list of events. From there you can
               register for the competitions. Events {">"} Competitions {">"} Click on
               the Poster {">"} Register for free .
-            </p>
+            </p><br></br>
           </div>
       </div>
     </>

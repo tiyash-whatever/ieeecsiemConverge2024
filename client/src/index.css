@@ -840,6 +840,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     .skill-slider .item {
         width: 100%;
     }
+    .signup {
+        margin-top: 20%;
+    }
   }
 
 .skill-slider .item img:hover {
@@ -998,7 +1001,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .container-rules{
-    padding:50px 200px;
+    padding:1rem 2rem;
 }
 .container-rules p{
     font-size: 1.2rem;
