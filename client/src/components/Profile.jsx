@@ -149,18 +149,36 @@ export default function Profile() {
             </form>
           </div>
         </div>
-        <h1 id="events" className="h1 text-center mt-5 mb-4">
-          EVENTS
+        <div className="container-rules">
+          <h1 className="display-5 text-center">Elevate Rules</h1>
+          <p>
+            1. The event will have seminars, workshops , inauguration talk , panel
+            discussions , competitions and games. For attending each event you
+            will get a certain number of points. The points you gather will be
+            reflected in your account on the website
+          </p>
+          <p>
+            2. You will get a chance to acquire more than 500 points throughout the
+            event in a span of 4 days. You need a minimum of 350 points to get a
+            certificate,
+          </p>
+          <p>
+            3. You will get chances to win amazing gifts using the points that you
+            collected.
+          </p>
+        </div>
+        <h1 id="events" className="display-5 text-center mt-5 mb-4">
+          Events
         </h1>
         <h1
           id="talks-head"
-          className="h1 text-center mt-5 mb-4"
+          className="h2 text-center mt-5 mb-4"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setShowTalks(!showTalks);
           }}
         >
-          TALKS <FontAwesomeIcon icon={faChevronDown} />
+          TALKS{"[Points: 10]"} <FontAwesomeIcon icon={faChevronDown} />
         </h1>
         {showTalks ? (
           <>

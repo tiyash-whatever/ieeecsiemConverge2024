@@ -992,3 +992,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     color:rgb(54, 254, 211);
     border:none;
 }
+
+#main-text{
+    text-align: justify;
+}
+
+.container-rules{
+    padding:50px 200px;
+}
+.container-rules p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
