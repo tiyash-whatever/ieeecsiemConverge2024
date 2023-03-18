@@ -10,9 +10,10 @@ const Admin = () => {
 
   const serverURL = "https://elevate2k23.onrender.com";
   const localURL = "http://localhost:8080";
+  const URL = serverURL;
 
   const getAllUser = () => {
-    fetch(`${serverURL}/getAllUsers`, {
+    fetch(`${URL}/getAllUsers`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -24,7 +25,7 @@ const Admin = () => {
 
   const deleteUser = (id, username) => {
     if (window.confirm(`Are you sure you want to delete ${username}`)) {
-      fetch(`${serverURL}/deleteUser`, {
+      fetch(`${URL}/deleteUser`, {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -51,7 +52,7 @@ const Admin = () => {
         `Are you sure you want to increase ${username}'s points by 10`
       )
     ) {
-      fetch(`${serverURL}/incPointsby10`, {
+      fetch(`${URL}/incPointsby10`, {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -79,7 +80,7 @@ const Admin = () => {
         `Are you sure you want to decrease ${username}'s points by 10`
       )
     ) {
-      fetch(`${serverURL}/decPointsby10`, {
+      fetch(`${URL}/decPointsby10`, {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -113,9 +114,9 @@ const Admin = () => {
               <p className="ml-2">
                 username: {i.username} <br />
                 fname: {i.firstName}
-                <br /> lname: {i.lastName}
+                <br /> lname: {i.lastName} <br /> fullname: {i.fullname}
                 <br /> email: {i.email} <br /> mobile: {i.mobile} <br />{" "}
-                institute: {i.institute} <br /> tid: {i.tid} <br /> points:{" "}
+                institute: {i.institute} <br /> tid: {i.tid}<br /> Date: {i.time} <br /> points:{" "}
                 {i.points}{" "}
               </p>
               <button
