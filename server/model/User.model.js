@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import moment from "moment-timezone";
 
-const dateIndia = moment.tz("Asia/Kolkata").format('YYYY-MM-DD HH:mm ZZ');
+// const dateIndia = moment.tz("Asia/Kolkata").format('YYYY-MM-DD HH:mm ZZ');
 // console.log(dateIndia);
 export const UserSchema = new mongoose.Schema({
     username: {
@@ -40,7 +40,7 @@ export const UserSchema = new mongoose.Schema({
     profile: { type: String },
     tid: { type: String },
     points: { type: Number },
-    time: { type: String, default: dateIndia }
+    time: { type: String, default: moment.tz("Asia/Kolkata").format('YYYY-MM-DD HH:mm ZZ') }
 
 });
 
