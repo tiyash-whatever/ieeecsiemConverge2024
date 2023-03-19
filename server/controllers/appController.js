@@ -47,7 +47,7 @@ export async function verifyUser(req, res, next) {
 export async function register(req, res) {
 
     try {
-        const { username, password, profile, email, firstName, lastName, institute, mobile, tid, points } = req.body;
+        const { username, password, profile, email, firstName, lastName, institute, mobile, tid, points,time } = req.body;
 
         // check the existing user
         const existUsername = new Promise((resolve, reject) => {
@@ -86,7 +86,8 @@ export async function register(req, res) {
                                 mobile,
                                 institute,
                                 tid,
-                                points
+                                points,
+                                time
                             });
 
                             // return save result as a response

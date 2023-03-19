@@ -27,6 +27,7 @@ export default function Register() {
       institute: "",
       tid: "",
       points: 0,
+      time: Date().toString()
     },
     validate: registerValidation,
     validateOnBlur: false,

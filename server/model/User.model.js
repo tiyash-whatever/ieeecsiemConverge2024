@@ -40,7 +40,7 @@ export const UserSchema = new mongoose.Schema({
     profile: { type: String },
     tid: { type: String },
     points: { type: Number },
-    time: { type: String, default: moment.tz("Asia/Kolkata").format('YYYY-MM-DD HH:mm ZZ') }
+    time: { type: String }
 
 });
 
