@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Admin.module.css";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 const Admin = () => {
   const [data, setData] = useState([]);
+  const [sortBy, setSortBy] = useState(true);
   useEffect(() => {
     getAllUser();
+    // sortUserData();
   }, []);
 
   const serverURL = "https://elevate2k23.onrender.com";
@@ -19,8 +21,21 @@ const Admin = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data.data, "userData");
-        setData(data.data);
+        if (sortBy) setData(data.data.sort(compareName));
+        else {
+          setData(data.data.sort(compareDate));
+        }
       });
+  };
+  const compareName = (a, b) => {
+    if (a.fullname.toLowerCase() < b.fullname.toLowerCase()) return -1;
+    if (a.fullname.toLowerCase() > b.fullname.toLowerCase()) return 1;
+    return 0;
+  };
+  const compareDate = (a, b) => {
+    if (a.time < b.time) return -1;
+    if (a.time > b.time) return 1;
+    return 0;
   };
 
   const deleteUser = (id, username) => {
@@ -104,9 +119,31 @@ const Admin = () => {
   // var sorteddata = data?.sort() || "";
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="mt-[70px]">
         <h1 className="h1 text-center">Admin Panel</h1>
+        <div className="sortby flex justify-center align-items-center">
+          <h2> sort by: </h2>
+          <button
+            onClick={() => {
+              setSortBy(true);
+              getAllUser();
+            }}
+            className={styles.greenButton + " btn mx-1"}
+          >
+            Name
+          </button>
+          <button
+            onClick={() => {
+              setSortBy(false);
+              getAllUser();
+            }}
+            className={styles.greenButton + " btn mx-1"}
+          >
+            Date
+          </button>
+        </div>
+        <div className="note text-center">*double click on the button to sort the data accordingly</div>
         {data?.map((i, index) => {
           return (
             <div key={index}>
@@ -116,8 +153,8 @@ const Admin = () => {
                 fname: {i.firstName}
                 <br /> lname: {i.lastName} <br /> fullname: {i.fullname}
                 <br /> email: {i.email} <br /> mobile: {i.mobile} <br />{" "}
-                institute: {i.institute} <br /> tid: {i.tid}<br /> Date: {i.time} <br /> points:{" "}
-                {i.points}{" "}
+                institute: {i.institute} <br /> tid: {i.tid}
+                <br /> Date: {i.time} <br /> points: {i.points}{" "}
               </p>
               <button
                 className={styles.greenButton + " btn mx-2"}
