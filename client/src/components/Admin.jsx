@@ -33,8 +33,8 @@ const Admin = () => {
     return 0;
   };
   const compareDate = (a, b) => {
-    if (a.time < b.time) return -1;
-    if (a.time > b.time) return 1;
+    if (Date(a.time) < Date(b.time)) return -1;
+    if (Date(a.time) > Date(b.time)) return 1;
     return 0;
   };
 
@@ -143,7 +143,9 @@ const Admin = () => {
             Date
           </button>
         </div>
-        <div className="note text-center">*double click on the button to sort the data accordingly</div>
+        <div className="note text-center">
+          *double click on the button to sort the data accordingly
+        </div>
         {data?.map((i, index) => {
           return (
             <div key={index}>
