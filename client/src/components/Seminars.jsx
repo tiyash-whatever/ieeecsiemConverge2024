@@ -2,7 +2,7 @@ import React from "react";
 import extend from "../styles/Profile.module.css";
 import shivam from "../assets/img/ShivamAbhilashTalks.jfif";
 
-const Talks = () => {
+const Seminars = () => {
   return (
     <div id="talks" className="row flex justify-content-center">
       <div className="col-lg-4 col-md-6">
@@ -65,4 +65,4 @@ const Talks = () => {
   );
 };
 
-export default Talks;
+export default Seminars;

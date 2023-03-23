@@ -22,7 +22,7 @@ import {
 import Events from "./Events";
 import ComingSoon from "./ComingSoon";
 import Competitions from "./Competitions";
-import Talks from "./Talks";
+import Seminars from "./Seminars";
 import Workshops from "./Workshops";
 
 export default function Profile() {
@@ -221,7 +221,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </div>
-        {showSeminar ? <ComingSoon /> : null}
+        {showSeminar ? <Seminars /> : null}
         <div
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
@@ -269,7 +269,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </h1>
-        {showTalks ? <Talks /> : null}
+        {showTalks ? <ComingSoon /> : null}
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
