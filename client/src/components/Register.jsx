@@ -11,7 +11,6 @@ import styles from "../styles/Username.module.css";
 import "../styles/register.css";
 import Navbar from "./Navbar";
 
-
 export default function Register() {
   const navigate = useNavigate();
   const [file, setFile] = useState();
@@ -27,7 +26,7 @@ export default function Register() {
       institute: "",
       tid: "",
       points: 0,
-      time: Date().toString()
+      time: Date().toString(),
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -60,20 +59,36 @@ export default function Register() {
         <Toaster position="top-center" reverseOrder={false}></Toaster>
 
         <div className="container-rules">
-            <h1 className="h1 text-center">Registration Rules</h1>
-            <p>
-              1. Click on the registration link to register for Elevate. Pay a
-              minimal amount of Rs 100/- and log in to your account. Your
-              candidature is subject to the verification of registration
-              payment, you'll get a confirmation mail within 24hrs. The account
-              of defaulters will be removed.
-            </p>
-            <p>
-              2. After logging in you will see a list of events. From there you can
-              register for the competitions. Events {">"} Competitions {">"} Click on
-              the Poster {">"} Register for free .
-            </p>
-          </div>
+          <h1 className="display-5 text-center">Registration Rules</h1>
+          <p>
+            1. Click on the registration link to register for Elevate. Pay a
+            minimal amount of Rs 100/- and log in to your account. Your
+            candidature is subject to the verification of registration payment,
+            you'll get a confirmation mail within 24hrs. The account of
+            defaulters will be removed.
+          </p>
+          <p>
+            2. After logging in you will see a list of events. From there you
+            can register for the competitions. Events {">"} Competitions {">"}{" "}
+            Click on the Poster {">"} Register for free .
+          </p>
+          <h1 className="display-5 text-center">Elevate Rules</h1>
+          <p>
+            1. The event will have seminars, workshops , inauguration talk ,
+            panel discussions , competitions and games. For attending each event
+            you will get a certain number of points. The points you gather will
+            be reflected in your account on the website
+          </p>
+          <p>
+            2. You will get a chance to acquire more than 500 points throughout
+            the event in a span of 4 days. You need a minimum of 350 points to
+            get a certificate,
+          </p>
+          <p>
+            3. You will get chances to win amazing gifts using the points that
+            you collected.
+          </p>
+        </div>
 
         <div className="flex justify-center items-center">
           {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
@@ -233,9 +248,7 @@ export default function Register() {
               </div>
             </form>
           </div>
-          
         </div>
-        
       </div>
     </>
   );

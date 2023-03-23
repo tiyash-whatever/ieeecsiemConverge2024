@@ -21,6 +21,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Events from "./Events";
 import ComingSoon from "./ComingSoon";
+import Competitions from "./Competitions";
+import Talks from "./Talks";
+import Workshops from "./Workshops";
 
 export default function Profile() {
   const [file, setFile] = useState();
@@ -234,7 +237,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </div>
-        {showWorkshop ? <ComingSoon /> : null}
+        {showWorkshop ? <Workshops /> : null}
         <div
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
@@ -250,7 +253,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </div>
-        {showCompetitions ? <ComingSoon /> : null}
+        {showCompetitions ? <Competitions /> : null}
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
@@ -266,7 +269,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </h1>
-        {showTalks ? <ComingSoon /> : null}
+        {showTalks ? <Talks /> : null}
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
