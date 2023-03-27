@@ -40,7 +40,9 @@ export const UserSchema = new mongoose.Schema({
     profile: { type: String },
     tid: { type: String },
     points: { type: Number },
-    time: { type: String }
+    time: { type: String },
+    size: { type: String },
+    referredby: { type: String }
 
 });
 

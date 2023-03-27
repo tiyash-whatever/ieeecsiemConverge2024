@@ -45,6 +45,7 @@ export async function registerValidation(values) {
     mobileVerify(errors, values);
     instituteVerify(errors, values);
     tidVerify(errors, values);
+    sizeVerify(errors, values);
 
     return errors;
 }
@@ -124,6 +125,12 @@ function instituteVerify(error = {}, values) {
 function tidVerify(error = {}, values) {
     if (!values.tid) {
         error.tid = toast.error("Transaction ID Required...!");
+    }
+    return error
+}
+function sizeVerify(error = {}, values) {
+    if (!values.size) {
+        error.size = toast.error("T-Shirt Size Required...!");
     }
     return error
 }

@@ -39,11 +39,11 @@ export async function registerUser(credentials) {
     try {
         const { data: { msg }, status } = await axios.post(`/api/register`, credentials);
 
-        let { username, email, firstName, lastName, mobile, institute, tid, points,time } = credentials;
+        let { username, email, firstName, lastName, mobile, institute, tid, points,time,size,referredby } = credentials;
 
         /** send email */
         if (status === 201) {
-            await axios.post('/api/registerMail', { username, userEmail: email, text: msg, firstName, lastName, mobile, institute, tid, points,time })
+            await axios.post('/api/registerMail', { username, userEmail: email, text: msg, firstName, lastName, mobile, institute, tid, points,time,size,referredby })
         }
 
         return Promise.resolve(msg)
