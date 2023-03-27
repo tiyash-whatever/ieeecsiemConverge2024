@@ -156,7 +156,9 @@ const Admin = () => {
                 <br /> lname: {i.lastName} <br /> fullname: {i.fullname}
                 <br /> email: {i.email} <br /> mobile: {i.mobile} <br />{" "}
                 institute: {i.institute} <br /> tid: {i.tid}
-                <br /> Date: {i.time} <br /> points: {i.points}{" "}
+                <br /> Date: {i.time}
+                <br /> Size: {i.size?i.size:""}
+                <br /> Referred By: {i.referredby?i.referredby:""} <br /> points: {i.points}{" "}
               </p>
               <button
                 className={styles.greenButton + " btn mx-2"}
