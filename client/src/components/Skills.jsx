@@ -69,6 +69,13 @@ export const Skills = () => {
                   <FontAwesomeIcon icon={faSquare} /> Panel Discussion
                 </h3>
                 <div className="item col-md-3">
+                  <img src={td} alt="guest" />
+                  <h4 className="h5">Tathagata Das</h4>
+                  <h5>
+                    Distinguished Member of Technical Staff Alumnus Software
+                  </h5>
+                </div>
+                <div className="item col-md-3">
                   <img src={dbd} alt="guest" />
                   <h4 className="h5">Deeptendu Bikash Dhar</h4>
                   <h5>
@@ -85,23 +92,17 @@ export const Skills = () => {
                   <h4 className="h5">Sandip Chakraborty</h4>
                   <h5>Associate Professor, Dept CSE, IIT-KGP</h5>
                 </div>
-                <div className="item col-md-3">
-                  <img src={ap} alt="guest" />
-                  <h4 className="h5">Arpan Pal</h4>
-                  <h5>
-                    Distinguished Chief Scientist, Embedded Systems, TCS R&D
-                  </h5>
-                </div>
+                
               </div>
               <div
                 // responsive={responsive}
                 className="owl-carousel owl-theme skill-slider row flex justify-content-center"
               >
                 <div className="item col-md-3">
-                  <img src={td} alt="guest" />
-                  <h4 className="h5">Tathagata Das</h4>
+                  <img src={ap} alt="guest" />
+                  <h4 className="h5">Arpan Pal</h4>
                   <h5>
-                    Distinguished Member of Technical Staff Alumnus Software
+                    Distinguished Chief Scientist, Embedded Systems, TCS R&D
                   </h5>
                 </div>
               </div>

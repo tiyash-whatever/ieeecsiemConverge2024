@@ -5,6 +5,8 @@ import ieeeLogo from "../assets/img/collaborators/IEEELogo.jpg"
 import iemLogo from "../assets/img/collaborators/iemLogo.jfif"
 import iiciem from "../assets/img/collaborators/iiciem.png"
 import talyeah from "../assets/img/collaborators/TALYEAH.png"
+import codingclub from "../assets/img/collaborators/Coding Club.png"
+import wie from "../assets/img/collaborators/wielogo.jpg"
 
 const Colaborators = () => {
   return (
@@ -30,6 +32,14 @@ const Colaborators = () => {
                 </div>
                 <div className="col-md-2">
                   <img src={talyeah} alt="" />
+                </div>
+              </div>
+              <div className="collab row flex align-items-center justify-content-center mt-3 ">
+              <div className="col-md-2">
+                  <img src={wie} alt="" />
+                </div>
+                <div className="col-md-2">
+                  <img src={codingclub} alt="" />
                 </div>
               </div>
             </div>
