@@ -146,9 +146,9 @@ const Admin = () => {
         <div className="note text-center">
           *double click on the button to sort the data accordingly
         </div>
-        <div className="admin-stats">
+        {/* <div className="admin-stats">
           Username: Name_Name_Name
-        </div>
+        </div> */}
         {data?.map((i, index) => {
           return (
             <div key={index}>
