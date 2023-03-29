@@ -120,7 +120,7 @@ const Admin = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-[70px]">
+      <div className="mt-[70px] admin-container">
         <h1 className="h1 text-center">Admin Panel</h1>
         <div className="sortby flex justify-center align-items-center">
           <h2> sort by: </h2>
@@ -145,6 +145,9 @@ const Admin = () => {
         </div>
         <div className="note text-center">
           *double click on the button to sort the data accordingly
+        </div>
+        <div className="admin-stats">
+          Username: Name_Name_Name
         </div>
         {data?.map((i, index) => {
           return (

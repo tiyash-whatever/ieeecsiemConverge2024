@@ -7,6 +7,8 @@ import projImg from "../assets/img/tealcard.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   // const projects = [
@@ -79,66 +81,35 @@ const Projects = () => {
                         </Row> */}
                         <div class="tl-content" style={{ top: "10%" }}>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               04:30 PM - 05:30 PM
-                            </i>{" "}
+                            </span>
                             <span
                               style={{ paddingLeft: "20px", fontStyle: "bold" }}
                             >
-                              Inauguration
+                              ELEVATE Inauguration
                             </span>
                           </p>
 
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              05:30 PM - 06:30 PM
-                            </i>{" "}
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
+                              5:30 PM - 6:00 PM
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
                               Orientation {"(Rules)"}
-                            </span>{" "}
+                            </span>
                           </p>
-                          {/* <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              12:00 PM - 1:00 PM
-                            </i>{" "}
-                            <span style={{ paddingLeft: "20px" }}>
-                              Panel Discussion: Women Rights/Human Rights
-                            </span>{" "}
-                          </p>
-                          <ul>
-                            -Women entrepreneurship in the wake of economic
-                            liberalisation and globalisation.
-                          </ul>
-                          <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              1:30 PM - 2:30 PM
-                            </i>{" "}
-                            <span style={{ paddingLeft: "40px" }}>
-                              Roadmap to DSA
-                            </span>{" "}
-                          </p>
-                          <ul>
-                            -Geeks For Geeks <br />
-                            Speaker : Dr. Mousiki Kar
-                          </ul>
-                          <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              6:00 PM - 7:00 PM
-                            </i>{" "}
-                            <span style={{ paddingLeft: "40px" }}>
-                              Physical and computational modeling of smart homes
-                            </span>{" "}
-                          </p>
-                          <ul>Speaker : Damla Turgut</ul> */}
                         </div>
-                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <div class="tl-content" style={{ top: "10%" }}>
+                        <div style={{ top: "10%" }}>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               10:00 AM - 10:15 AM
-                            </i>{" "}
+                            </span>
                             <span
                               style={{ paddingLeft: "20px", fontStyle: "bold" }}
                             >
@@ -147,64 +118,72 @@ const Projects = () => {
                           </p>
 
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               10:15 AM - 11:15 AM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Seminar: Arijit Hazra
-                            </span>{" "}
+                              Seminar - Sleeping on the roads to the Robot Man
+                              of Bengal: A bootstrapped journey of an
+                              entrepreneur ~ Arijit Hazra
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               11:30 AM - 1:30 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Workshop - 3D printing {"(TAL)"} / Coding club{" "}
-                              {"( app dev)"}
-                            </span>{" "}
+                              Parallel Workshops - 3D Printing(Think again Lab)
+                              & Embedded Systems(Alumnus Software)
+                            </span>
                           </p>
                           {/* <ul>
                             -Women entrepreneurship in the wake of economic
                             liberalisation and globalisation.
                           </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               1:30 PM - 2:30 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
                               Lunch break
-                            </span>{" "}
+                            </span>
                           </p>
                           {/* <ul>
                             -Geeks For Geeks <br />
                             Speaker : Dr. Mousiki Kar
                           </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               3:00 PM - 4:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Panel talk
-                            </span>{" "}
+                              Panel Discussion - The necessity of
+                              Industry-Academia harmony
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               4:30 PM - 6:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Competition - Ideathon
-                            </span>{" "}
+                              Competition - PPT Presentation competition (WiE
+                              Kolkata Section)
+                            </span>
                           </p>
-                          {/* <ul>Speaker : Damla Turgut</ul> */}
                         </div>
-                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <div class="tl-content" style={{ top: "10%" }}>
+                        <div style={{ top: "10%" }}>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               10:00 AM - 10:15 AM
-                            </i>{" "}
+                            </span>
                             <span
                               style={{ paddingLeft: "20px", fontStyle: "bold" }}
                             >
@@ -213,71 +192,71 @@ const Projects = () => {
                           </p>
 
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               10:15 AM - 12:15 AM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Workshop - IoT {"(TAL)"}
-                            </span>{" "}
+                              Parallel Workshops - Internet of Things(Think
+                              Again Lab) & Flutter Development(IEM Coding Club)
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               12:30 PM - 1:30 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Seminar: Subodh Gajare
-                            </span>{" "}
+                              Seminar (Coming Soon)
+                            </span>
                           </p>
-                          {/* <ul>
-                            -Women entrepreneurship in the wake of economic
-                            liberalisation and globalisation.
-                          </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               1:30 PM - 2:30 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
                               Lunch break
-                            </span>{" "}
+                            </span>
                           </p>
-                          {/* <ul>
-                            -Geeks For Geeks <br />
-                            Speaker : Dr. Mousiki Kar
-                          </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               2:30 PM - 3:30 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Seminar: Shivam Avilash
-                            </span>{" "}
+                              Seminar - AI Lens: Data driven Artificial
+                              Inteligence ~ Shivam Avilash
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               3:30 PM - 5:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Competition
-                            </span>{" "}
+                              Competition - Ideathon
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               5:00 PM - 6:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Seminar: Indrajit Lahiri
-                            </span>{" "}
+                              Seminar - Building a personal brand through social
+                              media ~ Indrajit Lahiri
+                            </span>
                           </p>
-                          {/* <ul>Speaker : Damla Turgut</ul> */}
                         </div>
-                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                       <Tab.Pane eventKey="fourth">
-                        <div class="tl-content" style={{ top: "10%" }}>
+                        <div style={{ top: "10%" }}>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               10:00 AM - 10:15 AM
-                            </i>{" "}
+                            </span>
                             <span
                               style={{ paddingLeft: "20px", fontStyle: "bold" }}
                             >
@@ -286,62 +265,51 @@ const Projects = () => {
                           </p>
 
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              10:15 AM - 11:15 AM
-                            </i>{" "}
-                            <span style={{ paddingLeft: "20px" }}>Seminar</span>{" "}
-                          </p>
-                          <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              11:30 AM - 1:00 PM
-                            </i>{" "}
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
+                              10:15 AM - 11:45 AM
+                            </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Competition: Blind coding
-                            </span>{" "}
+                              Competition - Blind coding
+                            </span>
                           </p>
-                          {/* <ul>
-                            -Women entrepreneurship in the wake of economic
-                            liberalisation and globalisation.
-                          </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
+                              12:00 AM - 1:00 PM
+                            </span>
+                            <span style={{ paddingLeft: "20px" }}>
+                              Seminar - Future of the Internet ~ Subodh Gajare
+                            </span>
+                          </p>
+                          <p>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               1:00 PM - 2:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
                               Lunch break
-                            </span>{" "}
+                            </span>
                           </p>
-                          {/* <ul>
-                            -Geeks For Geeks <br />
-                            Speaker : Dr. Mousiki Kar
-                          </ul> */}
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               2:00 PM - 3:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Point Bidding + Prize Distribution
-                            </span>{" "}
+                              Valedictory Session (Auction & Prize Distribution)
+                            </span>
                           </p>
                           <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
+                            <FontAwesomeIcon icon={faClock} />{" "}
+                            <span style={{ color: "white" }}>
                               3:30 PM - 6:00 PM
-                            </i>{" "}
+                            </span>
                             <span style={{ paddingLeft: "40px" }}>
-                              Cultural
-                            </span>{" "}
+                              Cultural Program
+                            </span>
                           </p>
-                          {/* <p>
-                            <i class="fa fa-clock-o" style={{ color: "white" }}>
-                              5:00 PM - 6:00 PM
-                            </i>{" "}
-                            <span style={{ paddingLeft: "40px" }}>
-                              Seminar: Indrajit Lahiri
-                            </span>{" "}
-                          </p> */}
-                          {/* <ul>Speaker : Damla Turgut</ul> */}
                         </div>
-                        {/* <div>Coming Soon!</div> */}
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
