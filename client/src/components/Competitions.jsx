@@ -2,6 +2,7 @@ import React from "react";
 import extend from "../styles/Profile.module.css";
 import arhackathon from "../assets/img/ARhackathon.jfif";
 import projectPresentation from "../assets/img/projectPresentation.jfif";
+import ideathon from "../assets/img/ideathon.jfif";
 
 const Competitions = () => {
   return (
@@ -43,25 +44,22 @@ const Competitions = () => {
         </div>
       </div>
 
-      {/*<div className="col-lg-4 col-md-6">
+      <div className="col-lg-4 col-md-6">
         <div
           className={`card ${extend.eventCard} mt-4 mb-5`}
           onClick={() => {
-            window.location.href = "/";
+            window.location.href =
+              "https://docs.google.com/forms/d/1sdXVd6Z0CywHrgp6_1PkYCFRGEc0hmkffC5z8PcWb30/edit?usp=drivesdk";
           }}
         >
-          <img
-            className="card-img-top"
-            src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
-            alt="CardImage"
-          />
+          <img className="card-img-top" src={ideathon} alt="CardImage" />
           <div className="card-body">
             <div className="card-text CardText text-center">
-              <h1 className="h2 text-center mt-3">EventName</h1>
+              <h1 className="h2 text-center mt-3">Ideathon</h1>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
