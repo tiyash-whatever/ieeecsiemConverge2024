@@ -2,6 +2,7 @@ import React from "react";
 import extend from "../styles/Profile.module.css";
 import threeDPri from "../assets/img/3dPrintingWorkshop.jfif";
 import iot from "../assets/img/iotWorkshop.jfif";
+import flutter from "../assets/img/flutterWorkshop.jfif"
 
 const Workshops = () => {
   return (
@@ -45,25 +46,25 @@ const Workshops = () => {
         </div>
       </div>
 
-      {/*<div className="col-lg-4 col-md-6">
+      <div className="col-lg-4 col-md-6">
         <div
           className={`card ${extend.eventCard} mt-4 mb-5`}
           onClick={() => {
-            window.location.href = "/";
+            window.location.href = "https://www.linkedin.com/posts/ieee-iemsb_registration-link-elevate2023coinregister-activity-7046865496134057985-70t5?utm_source=share&utm_medium=member_android";
           }}
         >
           <img
             className="card-img-top"
-            src="https://ai.iti.gov.eg/wp-content/uploads/2020/05/event.jpg"
+            src={flutter}
             alt="CardImage"
           />
           <div className="card-body">
             <div className="card-text CardText text-center">
-              <h1 className="h2 text-center mt-3">EventName</h1>
+              <h1 className="h2 text-center mt-3">Flutter Workshop</h1>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

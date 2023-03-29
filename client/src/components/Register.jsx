@@ -92,7 +92,7 @@ export default function Register() {
           </p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center rambo">
           {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
           <div className="flex justify-center items-center">
           {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}

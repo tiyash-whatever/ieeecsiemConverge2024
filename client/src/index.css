@@ -331,6 +331,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-bottom: 5%;
     width: 500px;
 }
+@media only screen and (max-width: 600px) {
+    .signup {
+        width: 95%;
+    }
+}
 
 /* Register here button animation */
 
@@ -1010,6 +1015,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .container-rules {
     padding: 50px 200px;
+    width:100vw;
 }
 
 .container-rules p {
