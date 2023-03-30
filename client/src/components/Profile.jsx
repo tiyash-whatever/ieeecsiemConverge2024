@@ -16,7 +16,6 @@ import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
-  faCoffee,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import Events from "./Events";

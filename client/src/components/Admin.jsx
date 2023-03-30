@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Admin.module.css";
 import Navbar from "./Navbar";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+
 const Admin = () => {
   const [data, setData] = useState([]);
   const [sortBy, setSortBy] = useState(true);
@@ -146,50 +152,79 @@ const Admin = () => {
         <div className="note text-center">
           *double click on the button to sort the data accordingly
         </div>
-        {/* <div className="admin-stats">
-          Username: Name_Name_Name
-        </div> */}
+
         {data?.map((i, index) => {
           return (
             <div key={index}>
-              <h4>User {index + 1}</h4>
-              <p className="ml-2">
-                username: {i.username} <br />
-                fname: {i.firstName}
-                <br /> lname: {i.lastName} <br /> fullname: {i.fullname}
-                <br /> email: {i.email} <br /> mobile: {i.mobile} <br />{" "}
-                institute: {i.institute} <br /> tid: {i.tid}
-                <br /> Date: {i.time}
-                <br /> Size: {i.size?i.size:""}
-                <br /> Referred By: {i.referredby?i.referredby:""} <br /> points: {i.points}{" "}
-              </p>
-              <button
-                className={styles.greenButton + " btn mx-2"}
-                onClick={() => {
-                  deleteUser(i._id, i.username);
-                }}
-              >
-                delete
-              </button>
-              <button
-                className={styles.greenButton + " btn mx-2"}
-                onClick={() => {
-                  incPoints(i._id, i.username, i.points);
-                }}
-              >
-                {" "}
-                +10
-              </button>
-              <button
-                className={styles.greenButton + " btn mx-2"}
-                onClick={() => {
-                  decPoints(i._id, i.username, i.points);
-                }}
-              >
-                {" "}
-                -10
-              </button>
-              <hr />
+              <div className="admin-stats">
+                <div>
+                  <p className="h3 short">
+                    {index + 1}. {i.username}
+                  </p>
+                  <p>{i.fullname}</p>
+                  <p>{i.time.slice(0, 16)}</p>
+                </div>
+                <div>
+                  <p className="h3 short">{i.tid}</p>
+                  <p>{i.email}</p>
+                  <p>{i.mobile}</p>
+                </div>
+                <div>
+                  <p className="h1 short"><span className="mobile">Points: </span>{i.points ? i.points : "0"}</p>
+                </div>
+                <div>
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      deleteUser(i._id, i.username);
+                    }}
+                  >
+                    delete
+                  </button>
+
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      decPoints(i._id, i.username, i.points);
+                    }}
+                  >
+                    -10
+                  </button>
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      incPoints(i._id, i.username, i.points);
+                    }}
+                  >
+                    +10
+                  </button>
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      let x = document.getElementById("user" + index);
+                      if (x.style.display === "block") x.style.display = "none";
+                      else {
+                        x.style.display = "block";
+                      }
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </button>
+                </div>
+              </div>
+              <div className="extra-stats" id={"user" + index}>
+                <h4>User {index + 1}</h4>
+                <p className="ml-2">
+                  fname: {i.firstName} <br />
+                  lname: {i.lastName} <br />
+                  institute: {i.institute} <br />
+                  Date: {i.time} <br />
+                  Size: {i.size ? i.size : ""} <br />
+                  Referred By: {i.referredby ? i.referredby : ""} <br />
+                </p>
+
+                <hr />
+              </div>
             </div>
           );
         })}
