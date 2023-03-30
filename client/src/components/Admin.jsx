@@ -152,6 +152,9 @@ const Admin = () => {
         <div className="note text-center">
           *double click on the button to sort the data accordingly
         </div>
+        <div className="text-center">
+          No. of Participants: {data.length-2} + 2(demo)
+        </div>
 
         {data?.map((i, index) => {
           return (
