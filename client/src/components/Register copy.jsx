@@ -27,6 +27,8 @@ export default function Register() {
       tid: "",
       points: 0,
       time: Date().toString(),
+      size:"",
+      referredby:""
     },
     validate: registerValidation,
     validateOnBlur: false,
@@ -90,7 +92,9 @@ export default function Register() {
           </p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center rambo">
+          {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
+          <div className="flex justify-center items-center">
           {/* <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}> */}
           <div className="signup form-bx">
             <div className="title flex flex-col items-center">
@@ -191,6 +195,24 @@ export default function Register() {
               </div>
               <div className="form-floating my-3">
                 <input
+                  {...formik.getFieldProps("size")}
+                  className="form-control"
+                  type="text"
+                  placeholder="size"
+                />
+                <label htmlFor="size">T-Shirt Size{"(eg. M,L,XL...)"}*</label>
+              </div>
+              <div className="form-floating my-3">
+                <input
+                  {...formik.getFieldProps("referredby")}
+                  className="form-control"
+                  type="text"
+                  placeholder="referredby"
+                />
+                <label htmlFor="referredby">Referred By</label>
+              </div>
+              <div className="form-floating my-3">
+                <input
                   {...formik.getFieldProps("tid")}
                   className="form-control"
                   type="text"
@@ -248,6 +270,7 @@ export default function Register() {
               </div>
             </form>
           </div>
+        </div>
         </div>
       </div>
     </>
