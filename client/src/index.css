@@ -1084,6 +1084,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .mobile{
     display:none;
 }
+.tid-col{
+    padding-left: 20px;
+}
 @media only screen and (max-width: 600px) {
     .admin-container{
         padding: 0px;
@@ -1097,5 +1100,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
     .mobile{
         display:inline;
+    }
+    .tid-col{
+        padding-left: 0px;
     }
 }

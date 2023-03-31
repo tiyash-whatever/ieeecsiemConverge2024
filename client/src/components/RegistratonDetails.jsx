@@ -7,12 +7,12 @@ const RegistratonDetails = () => {
       <div className="container" id="register">
         {/* <div className="row spacing"></div> */}
         <div className="row text-center">
-          <NavLink id="btn-ani" to="/" target="_blank">
+          <NavLink id="btn-ani" to="/register" target="_blank">
             <span> </span>
             <span> </span>
             <span> </span>
             <span> </span>
-            Login Here!
+            Register Here!
           </NavLink>
         </div>
       </div>

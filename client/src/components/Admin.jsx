@@ -126,7 +126,7 @@ const Admin = () => {
   return (
     <>
       <Navbar />
-      
+
       <div className="mt-[70px] admin-container">
         <h1 className="h1 text-center">Admin Panel</h1>
         <div className="sortby flex justify-center align-items-center">
@@ -161,14 +161,14 @@ const Admin = () => {
           return (
             <div key={index}>
               <div className="admin-stats">
-                <div>
+                <div className="username-col">
                   <p className="h3 short">
                     {index + 1}. {i.username}
                   </p>
                   <p>{i.fullname}</p>
                   <p>{i.time.slice(0, 16)}</p>
                 </div>
-                <div>
+                <div className="tid-col">
                   <p className="h3 short">{i.tid}</p>
                   <p>{i.email}</p>
                   <p>{i.mobile}</p>
