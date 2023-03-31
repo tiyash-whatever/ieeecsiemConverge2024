@@ -126,6 +126,7 @@ const Admin = () => {
   return (
     <>
       <Navbar />
+      
       <div className="mt-[70px] admin-container">
         <h1 className="h1 text-center">Admin Panel</h1>
         <div className="sortby flex justify-center align-items-center">
