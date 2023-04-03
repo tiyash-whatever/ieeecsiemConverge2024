@@ -23,6 +23,7 @@ import ComingSoon from "./ComingSoon";
 import Competitions from "./Competitions";
 import Seminars from "./Seminars";
 import Workshops from "./Workshops";
+import PanelTalks from "./PanelTalks"
 
 export default function Profile() {
   const [file, setFile] = useState();
@@ -268,7 +269,7 @@ export default function Profile() {
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </h1>
-        {showTalks ? <ComingSoon /> : null}
+        {showTalks ? <PanelTalks /> : null}
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"

@@ -1105,3 +1105,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         padding-left: 0px;
     }
 }
+.gif{
+    height:300px;
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+}
