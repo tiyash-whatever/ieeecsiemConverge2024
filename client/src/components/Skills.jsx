@@ -16,6 +16,7 @@ import skp from "../assets/img/guests/Susanta Kumar Parui.jpg";
 import sc from "../assets/img/guests/Sandip Chakraborty.jpg";
 import ap from "../assets/img/guests/Arpan Pal.jpg";
 import td from "../assets/img/guests/Tathagata Das.jpg";
+import debika from "../assets/img/guests/debikaBhattacharya.jpg";
 // import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 // import arrow1 from "../assets/img/arrow1.svg";
@@ -69,20 +70,6 @@ export const Skills = () => {
                   <FontAwesomeIcon icon={faSquare} /> Panel Discussion
                 </h3>
                 <div className="item col-md-3">
-                  <img src={td} alt="guest" />
-                  <h4 className="h5">Tathagata Das</h4>
-                  <h5>
-                    Distinguished Member of Technical Staff Alumnus Software
-                  </h5>
-                </div>
-                <div className="item col-md-3">
-                  <img src={dbd} alt="guest" />
-                  <h4 className="h5">Deeptendu Bikash Dhar</h4>
-                  <h5>
-                    Distinguished Member of Technical Staff Alumnus Software
-                  </h5>
-                </div>
-                <div className="item col-md-3">
                   <img src={skp} alt="guest" />
                   <h4 className="h5">Susanta Kumar Parui</h4>
                   <h5>Professor, Dept ECE, IIEST Shibpur</h5>
@@ -92,12 +79,12 @@ export const Skills = () => {
                   <h4 className="h5">Sandip Chakraborty</h4>
                   <h5>Associate Professor, Dept CSE, IIT-KGP</h5>
                 </div>
-                
-              </div>
-              <div
-                // responsive={responsive}
-                className="owl-carousel owl-theme skill-slider row flex justify-content-center"
-              >
+
+                <div className="item col-md-3">
+                  <img src={debika} alt="guest" />
+                  <h4 className="h5">Dr. Debika Bhattacharya</h4>
+                  <h5>Dean of Academics & Controller of Examinations, IEM</h5>
+                </div>
                 <div className="item col-md-3">
                   <img src={ap} alt="guest" />
                   <h4 className="h5">Arpan Pal</h4>
@@ -106,23 +93,25 @@ export const Skills = () => {
                   </h5>
                 </div>
               </div>
-              {/* <div
+              <div
                 // responsive={responsive}
-                className="owl-carousel owl-theme skill-slider row"
+                className="owl-carousel owl-theme skill-slider row flex justify-content-center"
               >
-                <div className="item col-md-4">
-                  <img src={blueman} alt="guest" />
-                  <h5>Coming Soon</h5>
+                <div className="item col-md-3">
+                  <img src={dbd} alt="guest" />
+                  <h4 className="h5">Deeptendu Bikash Dhar</h4>
+                  <h5>
+                    Distinguished Member of Technical Staff Alumnus Software
+                  </h5>
                 </div>
-                <div className="item col-md-4">
-                  <img src={youngwom} alt="guest" />
-                  <h5>Coming Soon</h5>
+                <div className="item col-md-3">
+                  <img src={td} alt="guest" />
+                  <h4 className="h5">Tathagata Das</h4>
+                  <h5>
+                    Distinguished Member of Technical Staff Alumnus Software
+                  </h5>
                 </div>
-                <div className="item col-md-4">
-                  <img src={redwom} alt="guest" />
-                  <h5>Coming Soon</h5>
-                </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
