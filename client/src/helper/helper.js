@@ -42,9 +42,9 @@ export async function registerUser(credentials) {
         let { username, email, firstName, lastName, mobile, institute, tid, points,time,size,referredby } = credentials;
 
         /** send email */
-        if (status === 201) {
-            await axios.post('/api/registerMail', { username, userEmail: email, text: msg, firstName, lastName, mobile, institute, tid, points,time,size,referredby })
-        }
+        // if (status === 201) {
+        //     await axios.post('/api/registerMail', { username, userEmail: email, text: msg, firstName, lastName, mobile, institute, tid, points,time,size,referredby })
+        // }
 
         return Promise.resolve(msg)
     } catch (error) {
