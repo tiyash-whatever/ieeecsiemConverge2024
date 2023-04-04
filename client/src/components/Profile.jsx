@@ -187,20 +187,20 @@ export default function Profile() {
         <div
           id="inaugration-head"
           className="h2 mt-5 mb-4 event-tab"
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            setShowInauguration(!showInauguration);
-          }}
+          style={{ cursor: "not-allowed" }}
+          // onClick={() => {
+          //   setShowInauguration(!showInauguration);
+          // }}
         >
           <div>
             INAUGRATION
             {" [Points: 60]"}
           </div>
-          {showInauguration ? (
+          {/* {showInauguration ? (
             <FontAwesomeIcon icon={faXmark} />
           ) : (
             <FontAwesomeIcon icon={faChevronDown} />
-          )}
+          )} */}
         </div>
         {showInauguration ? <ComingSoon /> : null}
         <div
