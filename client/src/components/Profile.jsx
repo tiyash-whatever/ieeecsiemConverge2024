@@ -273,17 +273,17 @@ export default function Profile() {
         <h1
           id="talks-head"
           className="h2 text-center mt-5 mb-4 event-tab"
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            setShowGames(!showGames);
-          }}
+          style={{ cursor: "not-allowed" }}
+          // onClick={() => {
+          //   setShowGames(!showGames);
+          // }}
         >
           <div>GAMES</div>{" "}
-          {showGames ? (
+          {/* {showGames ? (
             <FontAwesomeIcon icon={faXmark} />
           ) : (
             <FontAwesomeIcon icon={faChevronDown} />
-          )}
+          )} */}
         </h1>
         {showGames ? <ComingSoon /> : null}
       </div>
