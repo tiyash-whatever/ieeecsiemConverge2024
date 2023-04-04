@@ -4,6 +4,7 @@ import threeDPri from "../assets/img/3dPrintingWorkshop.jfif";
 import iot from "../assets/img/iotWorkshop.jfif";
 import flutter from "../assets/img/flutterWorkshop.jfif";
 import embedded from "../assets/img/embeddedSystemWorkshop.jfif"
+import embeddedNew from "../assets/img/embedded.jfif"
 
 const Workshops = () => {
   return (
@@ -69,7 +70,7 @@ const Workshops = () => {
                 "https://www.linkedin.com/posts/ieee-iemsb_registration-link-elevate2023coinregister-activity-7047185136362160128-w70o?utm_source=share&utm_medium=member_android";
             }}
           >
-            <img className="card-img-top" src={embedded} alt="CardImage" />
+            <img className="card-img-top" src={embeddedNew} alt="CardImage" />
             <div className="card-body">
               <div className="card-text CardText text-center">
                 <h1 className="h2 text-center mt-3">Embedded Systems Workshop</h1>

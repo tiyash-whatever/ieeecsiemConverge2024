@@ -353,6 +353,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 40%;
     margin: auto;
 }
+#btn-ani:-webkit-any-link{
+    cursor: not-allowed;
+}
 
 @media only screen and (max-width: 600px) {
     #btn-ani {
@@ -1111,3 +1114,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: auto;
     margin-top: 50px;
 }
+
