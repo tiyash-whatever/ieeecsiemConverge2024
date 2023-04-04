@@ -207,7 +207,7 @@ const Projects = () => {
                               12:30 PM - 1:30 PM
                             </span>
                             <span style={{ paddingLeft: "20px" }}>
-                              Seminar (Coming Soon)
+                              Competition - Project Presentation Competition
                             </span>
                           </p>
                           <p>
