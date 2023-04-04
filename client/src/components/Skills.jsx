@@ -17,6 +17,13 @@ import sc from "../assets/img/guests/Sandip Chakraborty.jpg";
 import ap from "../assets/img/guests/Arpan Pal.jpg";
 import td from "../assets/img/guests/Tathagata Das.jpg";
 import debika from "../assets/img/guests/debikaBhattacharya.jpg";
+import satyajit from "../assets/img/guests/Dr.Satyajit Chakrabarti.jpeg";
+import alex from "../assets/img/guests/Dr. Satyajit Chakrabarti..jpg";
+import thomas from "../assets/img/guests/Dr.Thomas Coughling.jpeg";
+import md from "../assets/img/guests/Dr. Md. Rawidean Md.Kassim.jpeg";
+import nita from "../assets/img/guests/Dr.Nita Patel.jpeg";
+import nobanita from "../assets/img/guests/Dr.Nabanita Das.jpeg";
+
 // import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 // import arrow1 from "../assets/img/arrow1.svg";
@@ -33,6 +40,59 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Guests</h2>
               {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p> */}
+              <div
+                // responsive={responsive}
+                className="owl-carousel owl-theme skill-slider row"
+              >
+                <h3 className="h3 text-left">
+                  <FontAwesomeIcon icon={faSquare} /> Inauguration
+                </h3>
+                <div className="item col-md-3">
+                  <img src={satyajit} alt="guest" />
+                  <h4 className="h5">Dr. Satyajit Chakrabarti</h4>
+                  <h5>President, IEM UEM Group</h5>
+                </div>
+                <div className="item col-md-3">
+                  <img src={alex} alt="guest" />
+                  <h4 className="h5">Dr. Satyajit Chakrabarti</h4>
+                  <h5>Director, IEM UEM Group</h5>
+                </div>
+
+                <div className="item col-md-3">
+                  <img src={thomas} alt="guest" />
+                  <h4 className="h5">Dr. Thomas Coughling</h4>
+                  <h5>President Elect, IEEE</h5>
+                </div>
+                <div className="item col-md-3">
+                  <img src={md} alt="guest" />
+                  <h4 className="h5">Dr. Md. Rawidean Md. Kassim</h4>
+                  <h5>
+                    IEEE Senior Member <br /> Chair (2002-13) IEEE CS <br />
+                    Malaysia Section
+                  </h5>
+                </div>
+              </div>
+              <div
+                // responsive={responsive}
+                className="owl-carousel owl-theme skill-slider row flex justify-content-center"
+              >
+                <div className="item col-md-3">
+                  <img src={nita} alt="guest" />
+                  <h4 className="h5">Dr. Nita Patel</h4>
+                  <h5>President Elect, IEEE CS</h5>
+                </div>
+                <div className="item col-md-3">
+                  <img src={nobanita} alt="guest" />
+                  <h4 className="h5">Dr. Nabanita Das</h4>
+                  <h5>ISI, Kolkata</h5>
+                </div>
+                <div className="item col-md-3">
+                  <img src={debika} alt="guest" />
+                  <h4 className="h5">Debika Bhattacharya</h4>
+                  <h5>Dean of Academics & Controller of Examinations, IEM</h5>
+                </div>
+              </div>
+
               <div
                 // responsive={responsive}
                 className="owl-carousel owl-theme skill-slider row"

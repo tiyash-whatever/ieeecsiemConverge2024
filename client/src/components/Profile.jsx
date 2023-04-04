@@ -193,7 +193,7 @@ export default function Profile() {
           // }}
         >
           <div>
-            INAUGRATION
+            INAUGURATION
             {" [Points: 60]"}
           </div>
           {/* {showInauguration ? (
