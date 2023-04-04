@@ -78,7 +78,8 @@ const NavbarNew = () => {
                 Guests
               </Nav.Link>
               <Nav.Link
-                href="#register"
+                href="/"
+                target="_blank"
                 className={
                   activeLink === "register"
                     ? "active navbar-link"
@@ -86,7 +87,7 @@ const NavbarNew = () => {
                 }
                 onClick={() => onUpdateActiveLink("register")}
               >
-                Register
+                Login
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

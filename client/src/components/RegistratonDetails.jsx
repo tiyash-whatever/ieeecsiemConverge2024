@@ -6,13 +6,13 @@ const RegistratonDetails = () => {
     <>
       <div className="container" id="register">
         {/* <div className="row spacing"></div> */}
-        <div className="row text-center">
-          <NavLink id="btn-ani" to="/register" target="_blank">
+        <div className="row text-center" id="reg-btn">
+          <NavLink id="btn-ani" to="/home" >
             <span> </span>
             <span> </span>
             <span> </span>
             <span> </span>
-            Register Here!
+            Registration Closed!
           </NavLink>
         </div>
       </div>
