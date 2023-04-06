@@ -94,6 +94,34 @@ const Admin = () => {
     } else {
     }
   };
+  const incPoints50 = (id, username, points) => {
+    // alert("points increased +10")
+    if (
+      window.confirm(
+        `Are you sure you want to increase ${username}'s points by 50`
+      )
+    ) {
+      fetch(`${URL}/incPointsby50`, {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          userid: id,
+          points: points,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.data);
+          getAllUser();
+        });
+    } else {
+    }
+  };
   const decPoints = (id, username, points) => {
     // alert("points decreased -10")
     if (
@@ -102,6 +130,34 @@ const Admin = () => {
       )
     ) {
       fetch(`${URL}/decPointsby10`, {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          userid: id,
+          points: points,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.data);
+          getAllUser();
+        });
+    } else {
+    }
+  };
+  const decPoints50 = (id, username, points) => {
+    // alert("points decreased -10")
+    if (
+      window.confirm(
+        `Are you sure you want to decrease ${username}'s points by 50`
+      )
+    ) {
+      fetch(`${URL}/decPointsby50`, {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -201,6 +257,22 @@ const Admin = () => {
                     }}
                   >
                     +10
+                  </button>
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      decPoints50(i._id, i.username, i.points);
+                    }}
+                  >
+                    -50
+                  </button>
+                  <button
+                    className={styles.greenButton + " btn mx-2"}
+                    onClick={() => {
+                      incPoints50(i._id, i.username, i.points);
+                    }}
+                  >
+                    +50
                   </button>
                   <button
                     className={styles.greenButton + " btn mx-2"}

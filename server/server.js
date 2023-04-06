@@ -66,6 +66,27 @@ app.post("/decPointsby10", async (req, res) => {
     }
 })
 
+app.post("/incPointsby50", async (req, res) => {
+    const { userid, points } = req.body;
+    try {
+        let updatedPoints = points+50;
+        UserModel.findByIdAndUpdate(userid, { $set: { points: updatedPoints } }, function (err) { console.log(err) })
+        res.send({ status: "ok", data: "points increased by 50" })
+    } catch (error) {
+        console.log(error)
+    }
+})
+app.post("/decPointsby50", async (req, res) => {
+    const { userid, points } = req.body;
+    try {
+        let updatedPoints = points-50;
+        UserModel.findByIdAndUpdate(userid, { $set: { points: updatedPoints } }, function (err) { console.log(err) })
+        res.send({ status: "ok", data: "points decreased by 50" })
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 
 /** api routes */
 app.use('/api', router)
