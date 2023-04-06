@@ -3,10 +3,7 @@ import styles from "../styles/Admin.module.css";
 import Navbar from "./Navbar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Admin = () => {
   const [data, setData] = useState([]);
@@ -210,7 +207,7 @@ const Admin = () => {
           *double click on the button to sort the data accordingly
         </div>
         <div className="text-center">
-          No. of Participants: {data.length-2} + 2(demo)
+          No. of Participants: {data.length - 2} + 2(demo)
         </div>
 
         {data?.map((i, index) => {
@@ -230,62 +227,73 @@ const Admin = () => {
                   <p>{i.mobile}</p>
                 </div>
                 <div>
-                  <p className="h1 short"><span className="mobile">Points: </span>{i.points ? i.points : "0"}</p>
+                  <p className="h1 short">
+                    <span className="mobile">Points: </span>
+                    {i.points ? i.points : "0"}
+                  </p>
                 </div>
                 <div>
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      deleteUser(i._id, i.username);
-                    }}
-                  >
-                    delete
-                  </button>
+                  <div className="mb-1">
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        deleteUser(i._id, i.username);
+                      }}
+                    >
+                      delete
+                    </button>
 
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      decPoints(i._id, i.username, i.points);
-                    }}
-                  >
-                    -10
-                  </button>
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      incPoints(i._id, i.username, i.points);
-                    }}
-                  >
-                    +10
-                  </button>
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      decPoints50(i._id, i.username, i.points);
-                    }}
-                  >
-                    -50
-                  </button>
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      incPoints50(i._id, i.username, i.points);
-                    }}
-                  >
-                    +50
-                  </button>
-                  <button
-                    className={styles.greenButton + " btn mx-2"}
-                    onClick={() => {
-                      let x = document.getElementById("user" + index);
-                      if (x.style.display === "block") x.style.display = "none";
-                      else {
-                        x.style.display = "block";
-                      }
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faChevronDown} />
-                  </button>
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        decPoints(i._id, i.username, i.points);
+                      }}
+                    >
+                      -10
+                    </button>
+
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        incPoints(i._id, i.username, i.points);
+                      }}
+                    >
+                      +10
+                    </button>
+                  </div>
+                  <div className="mt-1">
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        decPoints50(i._id, i.username, i.points);
+                      }}
+                    >
+                      -50
+                    </button>
+
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        incPoints50(i._id, i.username, i.points);
+                      }}
+                    >
+                      +50
+                    </button>
+
+                    <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        let x = document.getElementById("user" + index);
+                        if (x.style.display === "block")
+                          x.style.display = "none";
+                        else {
+                          x.style.display = "block";
+                        }
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faChevronDown} />
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="extra-stats" id={"user" + index}>
