@@ -274,10 +274,10 @@ const Admin = () => {
                     <button
                       className={styles.greenButton + " btn mx-2"}
                       onClick={() => {
-                        deleteUser(i._id, i.username);
+                        incPoints20(i._id, i.username, i.points);
                       }}
                     >
-                      delete
+                      +20
                     </button>
 
                     <button
