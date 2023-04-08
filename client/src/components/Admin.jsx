@@ -91,6 +91,34 @@ const Admin = () => {
     } else {
     }
   };
+  const incPoints20 = (id, username, points) => {
+    // alert("points increased +10")
+    if (
+      window.confirm(
+        `Are you sure you want to increase ${username}'s points by 20`
+      )
+    ) {
+      fetch(`${URL}/incPointsby20`, {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          userid: id,
+          points: points,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.data);
+          getAllUser();
+        });
+    } else {
+    }
+  };
   const incPoints50 = (id, username, points) => {
     // alert("points increased +10")
     if (
@@ -234,6 +262,15 @@ const Admin = () => {
                 </div>
                 <div>
                   <div className="mb-1">
+                    {/* <button
+                      className={styles.greenButton + " btn mx-2"}
+                      onClick={() => {
+                        deleteUser(i._id, i.username);
+                      }}
+                    >
+                      delete
+                    </button> */}
+
                     <button
                       className={styles.greenButton + " btn mx-2"}
                       onClick={() => {
